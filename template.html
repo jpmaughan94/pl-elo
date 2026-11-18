@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premier League Elo ratings · Datacor</title>
+<meta name="game:title" content="Premier League Elo ratings">
+<meta name="game:date" content="2026-11-17">
+<meta name="game:label" content="Football">
+<meta name="game:summary" content="Every Premier League club rated by Elo, updated after each round, with the history since 2010.">
+<style>
+  :root {
+    --text: #1a1a1a; --text-2: #555; --text-3: #8a8a8a;
+    --rule: #e5e5e5; --row-hover: #f6f6f4; --row-sel: #f1f1ee;
+    --up: #1a7f37; --down: #cf222e;
+    --c1: #2a78d6; --c2: #eb6834;
+    --line: #d4d4d4; --line-old: #ececec;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; color: var(--text); }
+  body { overflow-x: hidden; }
+  body { font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
+  a { color: inherit; }
+  .back { font-size: 14px; color: var(--text-3); text-decoration: none; }
+  .back:hover { color: var(--text); }
+  h1 { font-size: 32px; line-height: 1.2; margin: 28px 0 8px; font-weight: 700; letter-spacing: -0.01em; }
+  h2 { font-size: 21px; margin: 48px 0 6px; font-weight: 700; }
+  p { margin: 0 0 12px; }
+  .updated { color: var(--text-3); font-size: 14px; margin-bottom: 20px; }
+  .intro { color: var(--text-2); max-width: 640px; }
+  .note { color: var(--text-3); font-size: 13.5px; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+  th { text-align: left; font-size: 13px; font-weight: 600; color: var(--text-3); padding: 8px 10px; border-bottom: 1px solid var(--text); white-space: nowrap; }
+  td { padding: 9px 10px; border-bottom: 1px solid var(--rule); font-size: 15px; white-space: nowrap; }
+  th.r, td.r { text-align: right; }
+  tbody tr.club-row { cursor: pointer; }
+  tbody tr.club-row:hover { background: var(--row-hover); }
+  tbody tr.club-row.open { background: var(--row-sel); }
+  tbody tr.club-row:focus-visible { outline: 2px solid var(--c1); outline-offset: -2px; }
+  td.rank { color: var(--text-3); width: 32px; }
+  td.name { font-weight: 600; }
+  .key { display: inline-block; width: 12px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 8px; position: relative; top: -1px; }
+  .up { color: var(--up); } .down { color: var(--down); } .flat { color: var(--text-3); }
+  .form { letter-spacing: 0.12em; font-size: 14px; color: var(--text-2); }
+  .form b { color: var(--text); }
+  .pos { color: var(--text-2); }
+
+  tr.detail > td { background: var(--row-sel); padding: 6px 10px 18px 52px; white-space: normal; }
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px; }
+  .detail-grid table { margin: 0; }
+  .detail-grid td { font-size: 14px; padding: 6px 4px; border-bottom: 1px solid #e2e2de; }
+  .detail-grid td.d { color: var(--text-3); width: 56px; }
+  .facts { margin: 8px 0 0; padding: 0; list-style: none; color: var(--text-2); }
+  .facts li { padding: 3px 0; }
+  .facts b { color: var(--text); font-weight: 600; }
+
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin: 14px 0 10px; font-size: 14px; }
+  .range button { background: none; border: 0; padding: 4px 0; margin-right: 14px; font: inherit; color: var(--text-3); cursor: pointer; border-bottom: 2px solid transparent; }
+  .range button[aria-pressed="true"] { color: var(--text); border-bottom-color: var(--text); }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; }
+  .legend span { white-space: nowrap; }
+  .legend button { background: none; border: 0; color: var(--text-3); cursor: pointer; font-size: 16px; padding: 0 2px; line-height: 1; }
+  .legend button:hover { color: var(--text); }
+  select { font: inherit; font-size: 14px; padding: 4px 6px; border: 1px solid #ccc; border-radius: 4px; background: #fff; color: var(--text-2); }
+
+  .chart { position: relative; }
+  #chart { width: 100%; display: block; touch-action: pan-y; }
+  #chart text { font-size: 11.5px; fill: var(--text-3); font-variant-numeric: tabular-nums; }
+  #chart .grid line { stroke: #efefef; }
+  #chart .avg { stroke: #b5b5b5; stroke-dasharray: 3 3; }
+  #chart path.team { fill: none; stroke-linejoin: round; stroke-linecap: round; }
+  #cal text, #rps text { font-size: 11.5px; fill: var(--text-3); font-variant-numeric: tabular-nums; }
+  #cal .lbl, #rps .lbl { font-size: 12.5px; font-weight: 600; fill: var(--text); stroke: #fff; stroke-width: 4px; paint-order: stroke; }
+  .acc td.name { white-space: normal; }
+  @media (max-width: 640px) { .acc th, .acc td { font-size: 13px; } .acc th { white-space: normal; } }
+  #chart .lbl { font-size: 12.5px; font-weight: 600; fill: var(--text); stroke: #fff; stroke-width: 4px; paint-order: stroke; }
+  .tip { position: absolute; pointer-events: none; background: #fff; border: 1px solid #d0d0d0; border-radius: 4px; padding: 8px 10px; font-size: 13px; line-height: 1.4; box-shadow: 0 2px 8px rgba(0,0,0,.08); opacity: 0; min-width: 170px; }
+  .tip .t { font-weight: 600; }
+  .tip .m { color: var(--text-2); }
+  .tip .d { color: var(--text-3); font-size: 12px; }
+
+
+  .ad td { font-size: 14.5px; }
+  .ad .rng { color: var(--text-3); font-size: 12.5px; }
+  .ad svg { display: block; flex: none; }
+  .netcell { display: flex; align-items: center; gap: 10px; }
+  @media (max-width: 640px) { .netcell { flex-direction: column; align-items: flex-start; gap: 0; } }
+  .ad tr.selrow td.name { }
+  .finding { border-left: 3px solid var(--text); padding: 2px 0 2px 14px; margin: 18px 0 0; color: var(--text-2); max-width: 680px; }
+  .finding b { color: var(--text); }
+
+  .players { margin-top: 14px; }
+  .players h4 { font-size: 15px; margin: 0 0 2px; }
+  .players .sub { color: var(--text-3); font-size: 13px; margin: 0 0 6px; }
+  .players table { margin: 0; background: transparent; }
+  .players th { font-size: 12px; border-bottom: 1px solid #c9c9c4; padding: 6px 6px; }
+  .players td { font-size: 14px; padding: 7px 6px; border-bottom: 1px solid #e2e2de; vertical-align: top; }
+  .players .pn { font-weight: 600; }
+  .players .pp { color: var(--text-3); font-size: 12px; margin-left: 6px; font-weight: 400; }
+  .players .st { display: block; font-size: 12px; color: var(--text-2); white-space: normal; max-width: 260px; }
+  .players .st b { color: var(--down); font-weight: 600; }
+  .players .st b.doubt { color: var(--text); }
+  .pbar { display: inline-flex; align-items: center; gap: 8px; }
+  .pbar span.b { display: inline-block; width: 90px; height: 6px; background: #e4e4e0; border-radius: 3px; position: relative; overflow: hidden; }
+  .pbar span.b i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--text); border-radius: 3px; }
+
+  .players tr.player-row { cursor: pointer; }
+  .players tr.player-row:hover td { background: #e9e9e4; }
+  .players tr.player-row.open td { background: #e6e6e1; border-bottom-color: transparent; }
+  .players tr.player-row:focus-visible { outline: 2px solid var(--c1); outline-offset: -2px; }
+  .players .caret { display: inline-block; width: 14px; color: var(--text-3); font-size: 11px; }
+  .players td.op { color: var(--text-3); text-align: center; padding-left: 0; padding-right: 0; width: 14px; }
+  .players tr.pwork > td { background: #fff; border-bottom: 1px solid #c9c9c4; padding: 12px 14px 14px; white-space: normal; }
+  .work p { font-size: 13.5px; color: var(--text-2); margin: 0 0 8px; max-width: 640px; }
+  .work p b { color: var(--text); }
+  .work .sum { font-size: 15px; color: var(--text); }
+  .wscroll { overflow-x: auto; margin: 4px 0 10px; }
+  @media (max-width: 640px) { .players .work table.wt { min-width: 0; } .players .work .wt th, .players .work .wt td { padding: 5px 4px; font-size: 12.5px; } .players td, .players th { padding-left: 4px; padding-right: 4px; } .players .caret { width: 11px; } .wscroll { max-width: calc(100vw - 52px); } .players tr.pwork > td { padding: 10px 8px 12px; } .players tr.pwork > td:first-child { display: none; } }
+  .work table.wt { margin: 0; min-width: 560px; }
+  .work .wt th { font-size: 11.5px; padding: 5px 6px; border-bottom: 1px solid var(--text); background: none; }
+  .work .wt td { font-size: 13px; padding: 6px 6px; border-bottom: 1px solid var(--rule); background: none; vertical-align: top; }
+  .work .wt tr.tot td { border-bottom: 0; border-top: 1px solid var(--text); font-weight: 600; }
+
+  .fxs { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 10px; }
+  .fx { font: inherit; font-size: 13px; background: #fff; border: 1px solid #d6d6d0; border-radius: 4px; padding: 4px 9px; cursor: pointer; color: var(--text-2); }
+  .fx:hover { border-color: var(--text-3); }
+  .fx.on { background: var(--text); color: #fff; border-color: var(--text); }
+  .score-line { font-size: 15px; margin: 0 0 4px; }
+  .players tr.rate-row { cursor: pointer; }
+  .players tr.rate-row:hover td { background: #e9e9e4; }
+  .players tr.rate-row.open td { background: #e6e6e1; border-bottom-color: transparent; }
+  .players tr.rate-row.other .pn { font-weight: 400; color: var(--text-2); }
+  .more { background: none; border: 0; padding: 8px 0 0; font: inherit; font-size: 13.5px; color: var(--text); text-decoration: underline; cursor: pointer; }
+  .top-players td { font-size: 14.5px; }
+  .show-sm { display: none; }
+  .show-sm-cell { display: none; }
+  @media (max-width: 640px) { .show-sm-cell { display: table-cell; } }
+  .missing { font-size: 13.5px; color: var(--text-2); margin: 4px 0 8px; }
+  .missing > span { display: block; padding: 2px 0; }
+  .missing .down { color: var(--down); }
+  .missing .mnews { color: var(--text-3); }
+  @media (max-width: 640px) { .show-sm { display: block; font-weight: 400; font-size: 12.5px; color: var(--text-3); } }
+
+  .h3 { font-size: 16px; margin: 28px 0 4px; }
+  .nx tr.nx-row { cursor: pointer; }
+  .nx tr.nx-row:hover { background: var(--row-hover); }
+  .nx tr.nx-row.open { background: var(--row-sel); }
+  .nx tr.nx-row:focus-visible { outline: 2px solid var(--c1); outline-offset: -2px; }
+  .nx .when { display: block; font-size: 12.5px; color: var(--text-3); font-weight: 400; }
+  .nx .teams { font-weight: 600; }
+  .hda { display: flex; width: 220px; height: 10px; gap: 2px; }
+  .hda i { display: block; height: 100%; }
+  .hda i:first-child { border-radius: 3px 0 0 3px; } .hda i:last-child { border-radius: 0 3px 3px 0; }
+  .nx .mk { color: var(--text-2); font-size: 13px; }
+  tr.nx-detail > td { background: var(--row-sel); padding: 8px 12px 18px; white-space: normal; }
+  .nx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; font-size: 14px; }
+  .nx-grid h5 { font-size: 13px; margin: 8px 0 6px; color: var(--text); }
+  .nx-grid table { margin: 0; }
+  .nx-grid td, .nx-grid th { font-size: 13.5px; padding: 5px 6px; background: none; border-bottom: 1px solid #e2e2de; }
+  .nx-grid th { border-bottom: 1px solid var(--text); }
+  .nx-grid p { margin: 0 0 6px; color: var(--text-2); }
+  .nx-grid b { color: var(--text); }
+  .scores { display: flex; gap: 6px; flex-wrap: wrap; }
+  .scores > span { background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 3px 8px; font-size: 13px; }
+  .legend-row { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13.5px; margin: 8px 0 4px; color: var(--text-2); }
+  .legend-row .lk { display: inline-block; width: 18px; height: 0; border-top: 2px solid; vertical-align: middle; margin-right: 6px; }
+  .acc td { font-size: 14.5px; }
+  @media (max-width: 640px) { .nx th, .nx td { padding-left: 4px; padding-right: 4px; } .nx-grid { grid-template-columns: 1fr; gap: 6px; } tr.nx-detail > td { padding: 8px 6px 14px; } }
+  .peaks td { font-size: 14.5px; }
+  .method p { color: var(--text-2); max-width: 680px; }
+  .method code { font: 13.5px/1 ui-monospace, Menlo, Consolas, monospace; background: #f4f4f2; padding: 2px 5px; border-radius: 3px; color: var(--text); }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--text-3); font-size: 13px; }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 26px; }
+    .hide-sm { display: none; }
+    td, th { padding: 8px 5px; font-size: 14px; }
+    td.rank { width: 24px; }
+    tr.detail > td { padding-left: 10px; }
+    .peaks td:last-child { white-space: normal; }
+    .detail-grid { grid-template-columns: 1fr; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Datacor</a>
+
+  <h1>Premier League Elo ratings</h1>
+  <p class="updated">Results to <span id="updated"></span> · <span id="season-label"></span></p>
+  <p class="intro">Elo gives every club a single number based on its results. A win against a strong side is worth more than a win against a weak one, so the ratings show who is playing well, not just who has the points. 1500 is the league average.</p>
+
+  <table aria-label="Premier League Elo ratings">
+    <thead><tr>
+      <th></th><th>Club</th><th class="r">Elo</th><th class="r">Since Aug<span class="hide-sm">ust</span></th>
+      <th class="r hide-sm">Last match</th><th class="hide-sm">Form</th><th class="r">League</th>
+    </tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <p class="note" style="margin-top:10px">Click a club for its recent results, player ratings and squad power rankings. “League” is its actual position in the table.</p>
+
+
+
+
+  <h2 id="next">Next round</h2>
+  <p class="intro" id="next-intro"></p>
+  <table class="nx" aria-label="Forecasts for the next round"><thead><tr>
+    <th>Match</th><th class="hide-sm">Chances (home · draw · away)</th><th class="r">Home</th><th class="r">Draw</th><th class="r">Away</th><th class="r hide-sm" id="nx-mk-head">Bookmakers</th>
+  </tr></thead><tbody id="nx-body"></tbody></table>
+  <p class="note" style="margin-top:10px">Chances from the goals model (the more accurate of our two models over the last 14 seasons). Click a match for the head-to-head.</p>
+
+  <h2>Most important players</h2>
+  <p class="intro">Ranked by power: the share of their team’s minutes they’ve played, multiplied by how good they’ve been compared with players in the same position. A regular who is among the best in his position scores close to 100.</p>
+  <table class="top-players"><thead><tr><th></th><th>Player</th><th class="hide-sm">Club</th><th class="r">Minutes</th><th class="r hide-sm">Quality</th><th class="r">Power</th></tr></thead>
+    <tbody id="top-players"></tbody></table>
+  <p class="note" style="margin-top:10px">Player data from Fantasy Premier League, to <span id="players-asof"></span>.</p>
+
+
+  <h2>Best single-game performances</h2>
+  <p class="intro">The highest match ratings this season. A rating compares a player’s goals, assists, xG, xA, defensive actions and FPL bonus points score in one game with every other appearance in his position. A typical full game is 6.5.</p>
+  <table class="top-players"><thead><tr><th></th><th>Player</th><th class="hide-sm">Match</th><th class="r">G</th><th class="r">A</th><th class="r hide-sm">xG+xA</th><th class="r">Rating</th></tr></thead>
+    <tbody id="best-games"></tbody></table>
+
+  <h2>Attack and defence</h2>
+  <p class="intro">A second model splits each club’s strength in two: how many goals it would score, and how many it would concede, in a game against an average Premier League side on a neutral pitch. Each number has a range. We’re 80% sure the true value lies inside it. Ranges are wider when there’s less evidence, which mostly means promoted clubs and squads that changed a lot over the summer.</p>
+  <table class="ad" aria-label="Attack and defence ratings">
+    <thead><tr>
+      <th></th><th>Club</th><th class="r hide-sm">Scores</th><th class="r hide-sm">Concedes</th><th id="net-head">Goal difference per game</th><th class="r hide-sm">Summer turnover</th>
+    </tr></thead>
+    <tbody id="ad-body"></tbody>
+  </table>
+  <p class="note" style="margin-top:10px">Grey bar = 80% range for goal difference per game against an average side. “Summer turnover” is the share of the club’s league minutes last season played by players who have since left.</p>
+  <p class="finding" id="finding"></p>
+
+
+  <h2 id="accuracy">How good are the forecasts?</h2>
+  <p class="intro" id="acc-intro"></p>
+  <table class="acc" aria-label="Forecast accuracy"><thead><tr><th>Forecast</th><th class="r">Log loss</th><th class="r">RPS</th><th class="r">Picks the result</th></tr></thead><tbody id="acc-body"></tbody></table>
+  <p class="note" style="margin-top:10px">Lower is better for log loss (how surprised the forecast was by what happened) and RPS (ranked probability score: how far the chances were from the result, treating a draw as closer to a home win than an away win is). “Picks the result” is how often the outcome given the highest chance actually happened.</p>
+
+  <h3 class="h3">Do the chances mean what they say?</h3>
+  <p class="intro">Every forecast chance, grouped into bands, against how often it actually happened. A perfectly calibrated forecast sits on the diagonal: things given 40% happen 40% of the time.</p>
+  <div class="legend-row" id="cal-legend"></div>
+  <div class="chart" id="cal-wrap"><svg id="cal" role="img" aria-label="Calibration chart"></svg><div class="tip" id="cal-tip"></div></div>
+
+  <h3 class="h3">Season by season</h3>
+  <p class="intro">Ranked probability score each season (lower is better). Some seasons are harder to call for everyone.</p>
+  <div class="chart" id="rps-wrap"><svg id="rps" role="img" aria-label="Forecast accuracy by season"></svg><div class="tip" id="rps-tip"></div></div>
+  <p class="finding" id="bet-finding"></p>
+
+  <h2>Ratings since 2010</h2>
+  <p class="intro">Each line is a club’s rating after every Premier League match. Gaps are seasons spent outside the top flight.</p>
+  <div class="controls">
+    <div class="range" role="group" aria-label="Time range">
+      <button data-range="all" aria-pressed="true">Since 2010</button><button data-range="5">Last 5 seasons</button><button data-range="1">This season</button>
+    </div>
+    <div class="legend" id="legend"></div>
+  </div>
+  <div class="chart" id="chart-wrap">
+    <svg id="chart" role="img" aria-label="Line chart of Premier League Elo ratings over time"></svg>
+    <div class="tip" id="tip"></div>
+  </div>
+  <p class="note">Hover over a line to see the match. The dashed line is 1500.</p>
+
+  <h2>Highest ratings since 2010</h2>
+  <table class="peaks"><tbody id="peaks"></tbody></table>
+
+  <div class="method">
+    <h2>How it works</h2>
+    <p>Before each match, the gap between the two ratings (plus <span id="p-hfa"></span> points for the home side) gives an expected result. Afterwards, both clubs move by the difference between what happened and what was expected, multiplied by <span id="p-k"></span>. Bigger winning margins count for a bit more. Whatever one club gains, the other loses.</p>
+    <p>Each summer, ratings are pulled <span id="p-reg"></span> of the way back towards 1500. Promoted clubs start at the average rating of the clubs they replace. Only Premier League matches count, from the 2010–11 season onwards, with 2010 seeded from the 2009–10 final table.</p>
+    <p>The attack and defence ratings come from a separate model. Goals in each match are treated as random, with a rate set by one side’s attack against the other’s defence, plus home advantage. After every match both numbers move towards what happened, and they move more when we’re less sure of them. Every match makes a rating more certain. Each summer the uncertainty goes back up, by more for clubs that lost a large share of their minutes, and those clubs are also pulled further back towards average. The settings were chosen by testing how well the model predicts each match before it’s played. Squad data comes from <a href="https://github.com/vaastav/Fantasy-Premier-League">vaastav/Fantasy-Premier-League</a>.</p>
+    <p>Player power has two parts. <b>Minutes</b> is the share of the team’s league minutes a player has been on the pitch this season. <b>Quality</b> is a percentile against every Premier League player in the same position, built from per-90 numbers: for goalkeepers, goals prevented, expected goals conceded and FPL’s bonus points system (BPS); for defenders, defensive actions, expected goals conceded with them on the pitch, expected goals and assists, and BPS; for midfielders, expected goals and assists, BPS and defensive actions; for forwards, mostly expected goals and assists. This season is blended with last season (counted at half weight), and players with few minutes are pulled towards the average for their position. Power is minutes × quality, so 100 means a player who never misses a minute and is the best in his position. Injury news comes from the official Fantasy Premier League game.</p>
+    <p>Match ratings score one game at a time. Each measure (goals + assists, xG + xA, defensive actions, BPS, and goals prevented for goalkeepers) is compared with every appearance in the same position this season, weighted by position, and added up. The total is then scaled so a typical 60+ minute game is a 6.5, and each standard deviation above or below is worth 0.75 of a point, between 3 and 10. Totals are for the match, not per 90, so a ten-minute cameo has less chance to rate highly.</p>
+    <p>Match forecasts come from both models. Elo turns the gap between two ratings (plus home advantage) into an expected score, then splits it into win, draw and loss, with draws likeliest between evenly matched sides. The goals model gives each side’s expected goals; two Poisson distributions turn those into a probability for every scoreline, and the scorelines are added up into win, draw and loss. The bookmakers’ chances are their odds turned into probabilities and scaled to add up to 100%, which removes their margin (about 3.7% on average). The comparison uses Bet365’s pre-match odds for every match since 2012–13, from football-data.co.uk; each forecast uses only what was known before kick-off.</p>
+    <p>Results from <a href="https://github.com/openfootball/football.json">openfootball</a>, with recent matches checked against published tables.</p>
+  </div>
+
+  <footer>Jack Maughan · Datacor</footer>
+</div>
+
+<script id="elo-data" type="application/json">__DATA__</script>
+<script>
+// Live data, rebuilt every 30 minutes by the GitHub Action in datacor-data (pl/run.sh).
+// Replace YOUR-GITHUB-USERNAME with the account that owns the repo. If the fetch fails, or the
+// live file is older than the snapshot embedded below, the page uses the snapshot.
+const DATA_URL = "https://raw.githubusercontent.com/YOUR-GITHUB-USERNAME/datacor-data/main/pl/public/pl-elo.json";
+
+(async function () {
+  let D = JSON.parse(document.getElementById("elo-data").textContent);
+  try {
+    if (DATA_URL && !DATA_URL.includes("YOUR-GITHUB-USERNAME")) {
+      const res = await fetch(DATA_URL, { cache: "no-cache" });
+      if (res.ok) { const live = await res.json(); if (live.updated >= D.updated) D = live; }
+    }
+  } catch (e) { /* offline or blocked: keep the snapshot */ }
+
+  const T = D.teams, tbl = D.table, seasons = D.seasons;
+  const EPOCH = Date.UTC(2010, 0, 1);
+  const toDate = d => new Date(EPOCH + d * 864e5);
+  const dayOf = s => Math.round((Date.parse(s) - EPOCH) / 864e5);
+  const fmt = (d, o = { day: "numeric", month: "long", year: "numeric" }) => toDate(d).toLocaleDateString("en-GB", { ...o, timeZone: "UTC" });
+  const SHORT = { "Brighton & Hove Albion": "Brighton", "AFC Bournemouth": "Bournemouth", "Manchester United": "Man United", "Manchester City": "Man City", "Tottenham Hotspur": "Spurs", "Nottingham Forest": "Nott'm Forest", "Wolverhampton Wanderers": "Wolves", "West Bromwich Albion": "West Brom", "Queens Park Rangers": "QPR" };
+  const short = n => SHORT[n] || n;
+  const ord = n => { const s = ["th", "st", "nd", "rd"], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
+  const arrow = (v, dp = 1) => {
+    if (Math.abs(v) < 0.05) return `<span class="flat">–</span>`;
+    return v > 0 ? `<span class="up">▲ ${v.toFixed(dp)}</span>` : `<span class="down">▼ ${Math.abs(v).toFixed(dp)}</span>`;
+  };
+  const COLORS = ["var(--c1)", "var(--c2)"];
+
+  document.getElementById("updated").textContent = fmt(D.updated) +
+    (D.generated ? `, checked ${new Date(D.generated.replace("Z", ":00Z")).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/London" })}` : "");
+  document.getElementById("season-label").textContent = `${D.season.replace("-", "–")} season, ${D.n_matches.toLocaleString("en-GB")} matches since 2010`;
+  document.getElementById("p-hfa").textContent = D.params.home_adv;
+  document.getElementById("p-k").textContent = D.params.k;
+  document.getElementById("p-reg").textContent = Math.round(D.params.regress * 100) + "%";
+
+  // ----- state -----
+  let selected = [];   // [{team, slot}]  colour stays with the club
+  let open = null;
+  const colorOf = t => { const s = selected.find(x => x.team === t); return s ? COLORS[s.slot] : null; };
+  function select(team) {
+    if (colorOf(team)) return;
+    if (selected.length >= 2) selected.shift();
+    const used = selected.map(s => s.slot);
+    selected.push({ team, slot: [0, 1].find(s => !used.includes(s)) });
+  }
+  function unselect(team) { selected = selected.filter(s => s.team !== team); }
+
+  // ----- table -----
+  function renderTable() {
+    const rows = tbl.map(r => {
+      const c = colorOf(r.team), lastD = r.last[0] ? r.last[0].d : 0;
+      const form = [...r.form].map(f => f === "W" ? `<b>W</b>` : f).join("");
+      let html = `<tr class="club-row${open === r.team ? " open" : ""}" tabindex="0" data-team="${r.team}" aria-expanded="${open === r.team}">
+        <td class="rank num">${r.rank}</td>
+        <td class="name"><span class="key" style="background:${c || "transparent"}"></span>${short(r.team)}</td>
+        <td class="r num"><b>${r.elo.toFixed(0)}</b></td>
+        <td class="r num">${arrow(r.season_change)}</td>
+        <td class="r num hide-sm">${arrow(lastD)}</td>
+        <td class="form hide-sm">${form}</td>
+        <td class="r num pos">${ord(r.league_pos)}</td></tr>`;
+      if (open === r.team) html += detailRow(r);
+      return html;
+    });
+    document.getElementById("tbody").innerHTML = rows.join("");
+  }
+  function adLine(team) {
+    const x = D.ad && D.ad.rows.find(y => y.team === team); if (!x) return "";
+    const turn = x.churn == null ? "Promoted this summer, so there’s little Premier League evidence yet." : `${Math.round(x.churn * 100)}% of last season’s league minutes were played by players who have since left.`;
+    return `<li>Scores <b>${x.gf.toFixed(2)}</b> a game (${x.gf_lo.toFixed(2)}–${x.gf_hi.toFixed(2)}) and concedes <b>${x.ga.toFixed(2)}</b> (${x.ga_lo.toFixed(2)}–${x.ga_hi.toFixed(2)}) against an average side.</li><li>${turn}</li>`;
+  }
+  function detailRow(r) {
+    const h = D.history[T.indexOf(r.team)];
+    const peak = h.reduce((a, b) => b[1] > a[1] ? b : a);
+    const gap = r.league_pos - r.rank;
+    const verdict = gap >= 3 ? `Rated ${ord(r.rank)} but ${ord(r.league_pos)} in the league, so results have been worse than performances suggest.` :
+                    gap <= -3 ? `${ord(r.league_pos)} in the league but only ${ord(r.rank)} on Elo, so they may be doing better than their level.` :
+                    `League position is roughly in line with the rating.`;
+    return `<tr class="detail"><td colspan="7"><div class="detail-grid">
+      <div>
+        <table><tbody>${r.last.map(m => `<tr>
+          <td class="d">${fmt(dayOf(m.date), { day: "numeric", month: "short" })}</td>
+          <td>${m.venue === "H" ? "v" : "at"} ${short(m.opp)}</td>
+          <td class="num">${m.gf}–${m.ga}</td>
+          <td class="r num">${arrow(m.d)}</td></tr>`).join("")}</tbody></table>
+      </div>
+      <ul class="facts">
+        <li><b>${r.pts} points</b> from ${r.played} games</li>
+        <li>Highest rating since 2010: <b>${peak[1].toFixed(0)}</b> (${fmt(peak[0], { month: "long", year: "numeric" })})</li>
+        <li>${verdict}</li>${adLine(r.team)}
+      </ul></div>${ratingsBlock(r.team)}${playersBlock(r.team)}</td></tr>`;
+  }
+  const tbody = document.getElementById("tbody");
+  function clickRow(team) {
+    open = open === team ? null : team;
+    if (open) select(team);
+    renderAll();
+  }
+  tbody.addEventListener("click", e => {
+    if (e.target.closest("tr.pwork")) return;
+    const fxb = e.target.closest("[data-fx]");
+    if (fxb) { selMatch[fxb.dataset.team] = fxb.dataset.fx; renderTable(); return; }
+    const rr = e.target.closest("tr.rate-row");
+    if (rr) { const k = rr.dataset.rk; openRate.has(k) ? openRate.delete(k) : openRate.add(k); renderTable(); return; }
+    const pr = e.target.closest("tr.player-row");
+    if (pr) { const id = pr.dataset.pid; openPlayers.has(id) ? openPlayers.delete(id) : openPlayers.add(id); renderTable(); return; }
+    const tr = e.target.closest("tr.club-row"); if (tr) clickRow(tr.dataset.team);
+  });
+  tbody.addEventListener("keydown", e => {
+    if (!(e.key === "Enter" || e.key === " ")) return;
+    if (e.target.matches("tr.rate-row")) { e.preventDefault(); const k = e.target.dataset.rk; openRate.has(k) ? openRate.delete(k) : openRate.add(k); renderTable(); document.querySelector(`tr.rate-row[data-rk="${CSS.escape(k)}"]`)?.focus(); return; }
+    if (e.target.matches("tr.player-row")) { e.preventDefault(); const id = e.target.dataset.pid; openPlayers.has(id) ? openPlayers.delete(id) : openPlayers.add(id); renderTable(); document.querySelector(`tr.player-row[data-pid="${id}"]`)?.focus(); return; }
+    if (e.target.matches("tr.club-row")) { e.preventDefault(); clickRow(e.target.dataset.team); }
+  });
+
+  // ----- legend -----
+  function renderLegend() {
+    const opts = [...T].filter(t => !colorOf(t) && D.history[T.indexOf(t)].length).sort();
+    document.getElementById("legend").innerHTML =
+      selected.map(s => `<span><span class="key" style="background:${COLORS[s.slot]}"></span>${short(s.team)} <button data-rm="${s.team}" aria-label="Remove ${s.team}">×</button></span>`).join("") +
+      `<select aria-label="Compare a club"><option value="">${selected.length >= 2 ? "Swap a club" : "Add a club"}</option>${opts.map(t => `<option value="${t}">${t}</option>`).join("")}</select>`;
+  }
+  document.getElementById("legend").addEventListener("click", e => { const b = e.target.closest("[data-rm]"); if (b) { unselect(b.dataset.rm); renderAll(); } });
+  document.getElementById("legend").addEventListener("change", e => { if (e.target.value) { select(e.target.value); renderAll(); } });
+
+
+
+  // ----- players -----
+    const POSN = { GK: "goalkeepers", DEF: "defenders", MID: "midfielders", FWD: "forwards" };
+  function statusLine(p) {
+    if (p.status === "a") return "";
+    const news = p.news ? p.news.replace(/\s+-\s+\d+% chance of playing\.?/i, "").replace(/\s+-\s+/, ", ") : "";
+    if (p.status === "d") return `<span class="st"><b class="doubt">Doubt${p.chance != null && p.chance !== "" ? ` (${p.chance}%)` : ""}</b> ${news}</span>`;
+    const lab = p.status === "s" ? "Suspended" : p.status === "i" ? "Injured" : "Unavailable";
+    return `<span class="st"><b>${lab}</b> ${news}</span>`;
+  }
+  const openPlayers = new Set();
+  const MEAS = {
+    xgi: { label: "xG + xA", dp: 2 }, dc: { label: "Defensive actions", dp: 1 }, bps: { label: "Bonus points score (BPS)", dp: 1 },
+    xgc: { label: "xG conceded while on the pitch", dp: 2, note: "lower is better" }, gp: { label: "Goals prevented", dp: 2 },
+  };
+  const sgn = (v, dp = 2) => (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(dp);
+  const fmtN = (v, dp) => v == null ? "–" : v.toFixed(dp);
+  function working(p, team) {
+    const PS = D.players.pos_stats[p.pos], S = D.players.settings, games = D.players.games[team] || 0;
+    const posName = POSN[p.pos];
+    const rows = Object.entries(PS.measures).map(([k, st]) => {
+      const [cur, prev, used, z] = p.m[k], M = MEAS[k];
+      return `<tr><td style="white-space:normal">${M.label}${M.note ? ` <span class="rng">(${M.note})</span>` : ""}</td>
+        <td class="r num hide-sm">${fmtN(cur, M.dp)}</td><td class="r num hide-sm">${fmtN(prev, M.dp)}</td><td class="r num"><b>${used.toFixed(M.dp)}</b></td>
+        <td class="r num">${st.avg.toFixed(M.dp)}</td><td class="r num">${sgn(z)}</td><td class="r num">${Math.round(st.weight * 100)}%</td>
+        <td class="r num"><b>${sgn(z * st.weight)}</b></td></tr>`;
+    }).join("");
+    const noData = p.minutes === 0 && p.prev_min === 0;
+    const half = Math.round(p.prev_min * S.last_season_weight);
+    return `<div class="work">
+      <p class="sum">Power <b>${p.power.toFixed(0)}</b> = minutes <b>${Math.round(p.share * 100)}%</b> × quality <b>${p.quality}</b></p>
+      <p><b>Minutes.</b> ${p.minutes.toLocaleString("en-GB")} of a possible ${(games * 90).toLocaleString("en-GB")} league minutes (${games} games), ${p.starts} start${p.starts === 1 ? "" : "s"}. ${p.minutes / (games * 90) > 0 ? `${p.minutes.toLocaleString("en-GB")} ÷ ${(games * 90).toLocaleString("en-GB")} = ${Math.round(p.share * 100)}%.` : ""}</p>
+      <p><b>Quality.</b> ${noData ? `No Premier League minutes this season or last, so every measure is just the average for ${posName} and the percentile means little.` :
+        `Each measure is per 90 minutes. “Used” blends this season (${p.minutes.toLocaleString("en-GB")} min) with last season at half weight (${p.prev_min.toLocaleString("en-GB")} min counts as ${half.toLocaleString("en-GB")}), plus ${S.prior_90s} games at the position average, so a handful of games can’t swing it. “Score” is how many standard deviations above or below the average for ${posName} the used figure is.`}</p>
+      <div class="wscroll"><table class="wt"><thead><tr><th>Per 90</th><th class="r hide-sm">This season</th><th class="r hide-sm">Last season</th><th class="r">Used</th>
+        <th class="r">${p.pos} avg</th><th class="r">Score</th><th class="r">Weight</th><th class="r">Adds</th></tr></thead>
+        <tbody>${rows}<tr class="tot"><td colspan="5" class="show-sm-cell">Total</td><td colspan="7" class="hide-sm">Total</td><td class="r num"><b>${sgn(p.q)}</b></td></tr></tbody></table></div>
+      <p>A total of ${sgn(p.q)} is better than <b>${p.quality}%</b> of the ${PS.n} ${posName} with ${S.qualify_min}+ minutes over the two seasons, so quality = <b>${p.quality}</b>.</p>
+    </div>`;
+  }
+  function playersBlock(team) {
+    const P = D.players && D.players.teams[team]; if (!P) return "";
+    const missing = P.filter(p => p.status !== "a" && (p.quality >= 60 || p.prev_min >= 1500 || p.share >= 0.5));
+    const cleanNews = n => (n || "").replace(/\s+-\s+\d+% chance of playing\.?/i, "").replace(/\s+-\s+/, ", ");
+    const missLine = missing.length ? `<p class="missing"><b>Missing or doubtful:</b> ${missing.map(p => {
+      const lab = p.status === "d" ? `doubt${p.chance != null ? " " + p.chance + "%" : ""}` : p.status === "s" ? "suspended" : "out";
+      const news = cleanNews(p.news);
+      return `<span>${p.name} <span class="${p.status === "d" ? "" : "down"}">(${lab})</span>${news ? ` <span class="mnews">${news}</span>` : ""}</span>`;
+    }).join("")}</p>` : "";
+    const rows = P.map((p, i) => {
+      const open = openPlayers.has(p.id);
+      const st = p.status === "a" ? "" : `<span class="st">${p.status === "d" ? `<b class="doubt">Doubt${p.chance != null ? ` ${p.chance}%` : ""}</b>` : `<b>${p.status === "s" ? "Suspended" : p.status === "i" ? "Injured" : "Unavailable"}</b>`} ${cleanNews(p.news)}</span>`;
+      return `<tr class="player-row${open ? " open" : ""}" data-pid="${p.id}" tabindex="0" aria-expanded="${open}">
+        <td class="rank num">${i + 1}</td>
+        <td style="white-space:normal"><span class="caret">${open ? "▾" : "▸"}</span><span class="pn">${p.name}</span><span class="pp">${p.pos}</span>${st}</td>
+        <td class="r num">${Math.round(p.share * 100)}%</td><td class="op">×</td>
+        <td class="r num">${p.quality}</td><td class="op">=</td>
+        <td class="r num"><b>${p.power.toFixed(0)}</b></td>
+        <td class="hide-sm"><span class="pbar"><span class="b"><i style="width:${p.power}%"></i></span></span></td></tr>` +
+        (open ? `<tr class="pwork"><td></td><td colspan="7">${working(p, team)}</td></tr>` : "");
+    }).join("");
+    return `<div class="players">
+      <h4>Squad power rankings</h4>${missLine}
+      <p class="sub">All ${P.length} players, ranked by power = share of the team’s minutes × quality (a percentile against every Premier League player in the same position). Click a player to see the working. Player data to ${fmt(dayOf(D.players.as_of), { day: "numeric", month: "long" })}.</p>
+      <table><thead><tr><th></th><th>Player</th><th class="r">Minutes</th><th></th><th class="r">Quality</th><th></th><th class="r">Power</th><th class="hide-sm"></th></tr></thead>
+      <tbody>${rows}</tbody></table>
+    </div>`;
+  }
+  function renderTopPlayers() {
+    if (!D.players) return;
+    const all = [];
+    Object.entries(D.players.teams).forEach(([t, ps]) => ps.forEach(p => all.push({ ...p, team: t })));
+    all.sort((a, b) => b.power - a.power);
+    document.getElementById("top-players").innerHTML = all.slice(0, 15).map((p, i) => `<tr>
+      <td class="rank num">${i + 1}</td><td class="name">${p.name}<span class="pp" style="color:var(--text-3);font-size:12px;margin-left:6px;font-weight:400">${p.pos}</span><span class="show-sm">${short(p.team)}</span></td>
+      <td class="hide-sm">${short(p.team)}</td><td class="r num">${Math.round(p.share * 100)}%</td><td class="r num hide-sm">${p.quality}</td><td class="r num"><b>${p.power.toFixed(0)}</b></td></tr>`).join("");
+    document.getElementById("players-asof").textContent = fmt(dayOf(D.players.as_of), { day: "numeric", month: "long" });
+  }
+
+
+  // ----- match ratings -----
+  const selMatch = {}, openRate = new Set();
+  const RMEAS = { xgi: ["xG + xA", 2], ga: ["Goals + assists", 0], dc: ["Defensive actions", 0], bps: ["BPS", 0], gp: ["Goals prevented", 2] };
+  function rateVal(p, k) { return { xgi: p[6] + p[7], ga: p[4] + p[5], dc: p[8], bps: p[10], gp: p[13] }[k]; }
+  function rateWorking(p) {
+    const S = D.matches.stats[p[2]], M = D.matches;
+    let tot = 0;
+    const rows = Object.entries(S.measures).map(([k, st]) => {
+      const z = p[12][k], add = z * st.weight; tot += add;
+      return `<tr><td>${RMEAS[k][0]}</td><td class="r num"><b>${rateVal(p, k).toFixed(RMEAS[k][1])}</b></td><td class="r num hide-sm">${st.avg.toFixed(2)}</td>
+        <td class="r num">${sgn(z)}</td><td class="r num">${Math.round(st.weight * 100)}%</td><td class="r num"><b>${sgn(add)}</b></td></tr>`;
+    }).join("");
+    const raw = M.base + M.scale * (tot - S.median) / S.sd;
+    return `<div class="work">
+      <div class="wscroll"><table class="wt" style="min-width:0"><thead><tr><th>This match</th><th class="r">Value</th><th class="r hide-sm">${p[2]} avg</th><th class="r">Score</th><th class="r">Weight</th><th class="r">Adds</th></tr></thead>
+      <tbody>${rows}<tr class="tot"><td colspan="5" class="hide-sm">Total</td><td colspan="4" class="show-sm-cell">Total</td><td class="r num"><b>${sgn(tot)}</b></td></tr></tbody></table></div>
+      <p>Rating = ${M.base} + ${M.scale} × (total ${sgn(tot)} − ${sgn(S.median)} for a typical 60+ minute game) ÷ ${S.sd.toFixed(2)} = <b>${p[11].toFixed(1)}</b>${Math.abs(raw - p[11]) > 0.06 ? ` (capped between 3 and 10; uncapped ${raw.toFixed(1)})` : ""}.
+      “Avg” and “Score” compare with all ${S.n.toLocaleString("en-GB")} appearances by ${POSN[p[2]]} this season.</p></div>`;
+  }
+  function ratingsBlock(team) {
+    if (!D.matches) return "";
+    const fx = D.matches.fixtures.filter(m => m.home === team || m.away === team);
+    if (!fx.length) return "";
+    const sel = fx.find(m => m.id === selMatch[team]) || fx[fx.length - 1];
+    const links = fx.map(m => {
+      const home = m.home === team, opp = home ? m.away : m.home, gf = home ? m.hs : m.as_, ga = home ? m.as_ : m.hs;
+      return `<button class="fx${m.id === sel.id ? " on" : ""}" data-fx="${m.id}" data-team="${team}">${fmt(dayOf(m.date), { day: "numeric", month: "short" })} ${home ? "v" : "at"} ${short(opp)} ${gf}–${ga}</button>`;
+    }).join("");
+    const rows = sel.p.map((p, i) => {
+      const club = p[1] ? sel.home : sel.away, mine = club === team, key = sel.id + "|" + p[0], open = openRate.has(key);
+      return `<tr class="rate-row${open ? " open" : ""}${mine ? "" : " other"}" data-rk="${key}" tabindex="0" aria-expanded="${open}">
+        <td class="rank num">${i + 1}</td>
+        <td style="white-space:normal"><span class="caret">${open ? "▾" : "▸"}</span><span class="pn">${p[0]}</span><span class="pp">${p[2]} · ${short(club)}</span></td>
+        <td class="r num">${p[3]}′</td><td class="r num">${p[4] || "–"}</td><td class="r num">${p[5] || "–"}</td>
+        <td class="r num hide-sm">${p[6].toFixed(2)}</td><td class="r num hide-sm">${p[7].toFixed(2)}</td>
+        <td class="r num hide-sm">${p[2] === "GK" ? p[9] + " sv" : p[8]}</td><td class="r num hide-sm">${p[10]}</td>
+        <td class="r num"><b>${p[11].toFixed(1)}</b></td></tr>` + (open ? `<tr class="pwork"><td></td><td colspan="9">${rateWorking(p)}</td></tr>` : "");
+    }).join("");
+    return `<div class="players">
+      <h4>Player ratings by match</h4>
+      <p class="sub">Both teams, ranked by impact on the game, out of 10 (a typical full game is 6.5). Click a player for the working. Player match data so far runs to ${fmt(dayOf(D.matches.as_of), { day: "numeric", month: "long" })}.</p>
+      <div class="fxs">${links}</div>
+      <p class="score-line">${sel.home} <b>${sel.hs}–${sel.as_}</b> ${sel.away} <span class="rng">${fmt(dayOf(sel.date))}</span></p>
+      <table><thead><tr><th></th><th>Player</th><th class="r">Min</th><th class="r">G</th><th class="r">A</th><th class="r hide-sm">xG</th><th class="r hide-sm">xA</th>
+        <th class="r hide-sm" title="Defensive actions (goalkeepers: saves)">Def</th><th class="r hide-sm">BPS</th><th class="r">Rating</th></tr></thead>
+      <tbody>${rows}</tbody></table>
+    </div>`;
+  }
+  function renderBestGames() {
+    if (!D.matches) return;
+    const all = [];
+    D.matches.fixtures.forEach(m => m.p.forEach(p => all.push({ p, m })));
+    all.sort((a, b) => b.p[11] - a.p[11] || b.p[10] - a.p[10]);
+    document.getElementById("best-games").innerHTML = all.slice(0, 10).map(({ p, m }, i) => {
+      const club = p[1] ? m.home : m.away, opp = p[1] ? m.away : m.home;
+      const gf = p[1] ? m.hs : m.as_, ga = p[1] ? m.as_ : m.hs;
+      return `<tr><td class="rank num">${i + 1}</td><td class="name">${p[0]}<span class="show-sm">${short(club)} ${p[1] ? "v" : "at"} ${short(opp)}</span></td>
+        <td class="hide-sm">${short(club)} ${gf}–${ga} ${p[1] ? "v" : "at"} ${short(opp)}<span class="rng"> · ${fmt(dayOf(m.date), { day: "numeric", month: "short" })}</span></td>
+        <td class="r num">${p[4]}</td><td class="r num">${p[5]}</td><td class="r num hide-sm">${(p[6] + p[7]).toFixed(2)}</td><td class="r num"><b>${p[11].toFixed(1)}</b></td></tr>`;
+    }).join("");
+  }
+
+
+  // ----- next round & forecast accuracy -----
+  const FC = D.forecast;
+  const MODEL_COL = { goals: "var(--c1)", elo: "var(--c2)", market: "#1a1a1a" };
+  const MODEL_NAME = { goals: "Goals model", elo: "Elo", market: "Bookmakers (Bet365)" };
+  const pct = x => Math.round(x * 100) + "%";
+  const openFx = new Set();
+  function hdaBar(p) {
+    const cols = ["#3a3a3a", "#c9c9c9", "#8c8c8c"];
+    return `<span class="hda" aria-hidden="true">${p.map((x, i) => `<i style="width:${(x * 100).toFixed(1)}%;background:${cols[i]}"></i>`).join("")}</span>`;
+  }
+  function teamFacts(team) {
+    const r = tbl.find(x => x.team === team), ad = D.ad && D.ad.rows.find(x => x.team === team);
+    const P = (D.players && D.players.teams[team]) || [];
+    const top = P.slice(0, 3).map(p => `${p.name} <span class="rng">${p.power.toFixed(0)}</span>`).join(", ");
+    const miss = P.filter(p => p.status !== "a" && (p.quality >= 60 || p.prev_min >= 1500 || p.share >= 0.5)).map(p => p.name);
+    return `<p><b>${short(team)}</b>${r ? ` · Elo ${r.elo.toFixed(0)} (${ord(r.rank)}) · ${ord(r.league_pos)} in the table · form ${r.form}` : ""}</p>
+      ${ad ? `<p>Scores ${ad.gf.toFixed(2)} and concedes ${ad.ga.toFixed(2)} a game against an average side.</p>` : ""}
+      ${top ? `<p>Most important: ${top}</p>` : ""}${miss.length ? `<p>Missing or doubtful: ${miss.join(", ")}</p>` : ""}`;
+  }
+  function fxDetail(p) {
+    const rows = [["goals", p.goals.probs], ["elo", p.elo.probs]].concat(p.market ? [["market", p.market.probs]] : []);
+    const h = p.h2h;
+    const h2hLine = h.played ? `<p>${h.played} Premier League meetings since 2010: <b>${short(p.home)} ${h.wins}</b>, draws <b>${h.draws}</b>, <b>${short(p.away)} ${h.losses}</b>.</p>` :
+      `<p>No Premier League meetings since 2010.</p>`;
+    const last = h.last.map(m => `<tr><td class="rng">${fmt(dayOf(m.date), { day: "numeric", month: "short", year: "numeric" })}</td><td>${short(m.home)} ${m.hg}–${m.ag} ${short(m.away)}</td></tr>`).join("");
+    return `<div class="nx-grid">
+      <div>
+        <h5>Chances</h5>
+        <table><thead><tr><th></th><th class="r">${short(p.home)}</th><th class="r">Draw</th><th class="r">${short(p.away)}</th></tr></thead><tbody>
+        ${rows.map(([k, pr]) => `<tr><td>${MODEL_NAME[k].replace(" (Bet365)", "")}</td>${pr.map(x => `<td class="r num">${pct(x)}</td>`).join("")}</tr>`).join("")}
+        </tbody></table>
+        ${p.market ? `<p class="rng" style="margin-top:4px">Bookmakers: odds ${p.market.odds.map(o => o.toFixed(2)).join(" / ")} (${p.market.source}), margin ${pct(p.market.margin)} removed.</p>` : `<p class="rng" style="margin-top:4px">Bookmaker odds appear here once the live odds feed is switched on.</p>`}
+        <h5>Expected goals</h5>
+        <p>${short(p.home)} <b>${p.goals.xg_home.toFixed(2)}</b> – <b>${p.goals.xg_away.toFixed(2)}</b> ${short(p.away)}</p>
+        <h5>Most likely scores</h5>
+        <div class="scores">${p.goals.scores.map(s => `<span>${s.h}–${s.a} <span class="rng">${pct(s.p)}</span></span>`).join("")}</div>
+      </div>
+      <div>
+        <h5>Head-to-head</h5>
+        ${h2hLine}
+        ${last ? `<table><tbody>${last}</tbody></table>` : ""}
+        <h5 style="margin-top:12px">The teams</h5>
+        ${teamFacts(p.home)}${teamFacts(p.away)}
+      </div></div>`;
+  }
+  function renderNext() {
+    if (!FC || !FC.previews || !FC.previews.length) { document.getElementById("next").style.display = "none"; return; }
+    const pv = FC.previews;
+    const hasMk = pv.some(p => p.market);
+    document.getElementById("nx-mk-head").style.display = hasMk ? "" : "none";
+    const d0 = pv[0].date, d1 = pv[pv.length - 1].date;
+    document.getElementById("next-intro").textContent = `${pv.length} matches, ${fmt(dayOf(d0), { day: "numeric", month: "long" })}${d1 !== d0 ? ` to ${fmt(dayOf(d1), { day: "numeric", month: "long" })}` : ""}. Each match’s chances of a home win, a draw and an away win${hasMk ? ", next to the bookmakers’" : ""}.`;
+    document.getElementById("nx-body").innerHTML = pv.map((p, i) => {
+      const key = p.home + "|" + p.away, open = openFx.has(key), g = p.goals.probs;
+      const when = fmt(dayOf(p.date), { weekday: "short", day: "numeric", month: "short" }) + (p.time ? ` · ${p.time}` : "");
+      return `<tr class="nx-row${open ? " open" : ""}" data-fxk="${key}" tabindex="0" aria-expanded="${open}">
+        <td><span class="caret" style="display:inline-block;width:14px;color:var(--text-3);font-size:11px">${open ? "▾" : "▸"}</span><span class="teams">${short(p.home)} v ${short(p.away)}</span><span class="when" style="margin-left:14px">${when}</span></td>
+        <td class="hide-sm">${hdaBar(g)}</td>
+        <td class="r num"><b>${pct(g[0])}</b></td><td class="r num">${pct(g[1])}</td><td class="r num"><b>${pct(g[2])}</b></td>
+        ${hasMk ? `<td class="r num hide-sm mk">${p.market ? p.market.probs.map(pct).join(" · ") : "–"}</td>` : ""}</tr>` +
+        (open ? `<tr class="nx-detail"><td colspan="${hasMk ? 6 : 5}">${fxDetail(p)}</td></tr>` : "");
+    }).join("");
+  }
+  document.getElementById("nx-body").addEventListener("click", e => {
+    const r = e.target.closest("tr.nx-row"); if (!r) return;
+    const k = r.dataset.fxk; openFx.has(k) ? openFx.delete(k) : openFx.add(k); renderNext();
+  });
+  document.getElementById("nx-body").addEventListener("keydown", e => {
+    if ((e.key === "Enter" || e.key === " ") && e.target.matches("tr.nx-row")) {
+      e.preventDefault(); const k = e.target.dataset.fxk; openFx.has(k) ? openFx.delete(k) : openFx.add(k); renderNext();
+      document.querySelector(`tr.nx-row[data-fxk="${CSS.escape(k)}"]`)?.focus();
+    }
+  });
+
+  function renderAccuracy() {
+    if (!FC || !FC.backtest) { document.getElementById("accuracy").style.display = "none"; return; }
+    const B = FC.backtest, S = B.summary;
+    const first = B.seasons[0].season.replace("-", "–"), last = B.seasons[B.seasons.length - 1].season.replace("-", "–");
+    document.getElementById("acc-intro").textContent = `Every Premier League match from ${first} to ${last} (${B.n.toLocaleString("en-GB")} games), forecast using only what was known before kick-off, compared with the bookmakers’ odds for the same match.`;
+    const rows = [["goals", "Goals model"], ["elo", "Elo"], ["market", "Bookmakers (Bet365, margin removed)"]];
+    document.getElementById("acc-body").innerHTML = rows.map(([k, name]) => `<tr><td class="name"><span class="key" style="background:${MODEL_COL[k]}"></span>${name}</td>
+        <td class="r num">${S[k].logloss.toFixed(3)}</td><td class="r num">${S[k].rps.toFixed(3)}</td><td class="r num">${(S[k].accuracy * 100).toFixed(1)}%</td></tr>`).join("") +
+      `<tr><td class="name" style="font-weight:400;color:var(--text-2)"><span class="key"></span>Always home ${pct(S.base_rate.home)}, draw ${pct(S.base_rate.draw)}, away ${pct(S.base_rate.away)}</td>
+        <td class="r num" style="color:var(--text-2)">${S.base_rate.logloss.toFixed(3)}</td><td class="r num" style="color:var(--text-3)">–</td><td class="r num" style="color:var(--text-2)">${(S.base_rate.home * 100).toFixed(1)}%</td></tr>`;
+    document.getElementById("cal-legend").innerHTML = ["goals", "elo", "market"].map(k => `<span><span class="lk" style="border-color:${MODEL_COL[k]};${k === "market" ? "border-top-style:dashed" : ""}"></span>${MODEL_NAME[k]}</span>`).join("") +
+      `<span><span class="lk" style="border-color:#bbb;border-top-style:dotted"></span>Perfect calibration</span>`;
+    drawCal(); drawRps();
+    const bt = B.bets;
+    const g = bt.goals, e = bt.elo;
+    const roi = x => (x >= 0 ? "+" : "−") + Math.abs(x * 100).toFixed(1) + "%";
+    document.getElementById("bet-finding").innerHTML = `<b>Could you beat the bookmakers with these ratings?</b> Not quite. The bookmakers’ chances are better on every measure. Betting one unit whenever our model rated an outcome at least 5% more likely than the best available odds implied would have meant ${g.bets.toLocaleString("en-GB")} bets since ${first} and a return of ${roi(g.roi)} with the goals model (${roi(e.roi)} with Elo). That’s close to breaking even, which already beats the bookmakers’ ${pct(B.avg_margin)} margin, but it isn’t a profit. The models disagree with the market by 10+ points on a home win in ${pct(B.disagree.goals)} of matches.`;
+  }
+  function lineChart(svgId, tipId, wrapId, series, opts) {
+    const svg = document.getElementById(svgId), wrap = document.getElementById(wrapId), tip = document.getElementById(tipId);
+    const W = wrap.clientWidth, H = Math.round(Math.max(260, Math.min(380, W * 0.5)));
+    const m = { l: 48, r: W < 560 ? 12 : 120, t: 12, b: opts.xLabel ? 44 : 30 };
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("height", H);
+    const X = v => m.l + (v - opts.x0) / (opts.x1 - opts.x0) * (W - m.l - m.r);
+    const Y = v => m.t + (opts.y1 - v) / (opts.y1 - opts.y0) * (H - m.t - m.b);
+    let g = "";
+    opts.yTicks.forEach(v => { g += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#efefef"></line><text x="${m.l - 6}" y="${Y(v) + 4}" text-anchor="end">${opts.yFmt(v)}</text>`; });
+    opts.xTicks.forEach(([v, lab]) => { g += `<text x="${X(v)}" y="${H - m.b + 16}" text-anchor="middle">${lab}</text>`; });
+    if (opts.diagonal) g += `<line x1="${X(0)}" y1="${Y(0)}" x2="${X(opts.x1)}" y2="${Y(opts.x1)}" stroke="#bbb" stroke-dasharray="1 4" stroke-width="1.5"></line>`;
+    if (opts.xLabel) g += `<text x="${(m.l + W - m.r) / 2}" y="${H - 4}" text-anchor="middle">${opts.xLabel}</text>`;
+    const labels = [];
+    series.forEach(s => {
+      g += `<path d="${s.pts.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + "," + Y(p[1]).toFixed(1)).join("")}" fill="none" stroke="${s.color}" stroke-width="2" ${s.dash ? 'stroke-dasharray="5 4"' : ""} stroke-linejoin="round"></path>`;
+      s.pts.forEach(p => { g += `<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="3" fill="${s.color}" stroke="#fff" stroke-width="1.5"></circle>`; });
+      const lp = s.pts[s.pts.length - 1]; labels.push({ y: Y(lp[1]), x: X(lp[0]), name: s.name });
+    });
+    if (W >= 560) {
+      labels.sort((a, b) => a.y - b.y);
+      for (let i = 1; i < labels.length; i++) if (labels[i].y - labels[i - 1].y < 15) labels[i].y = labels[i - 1].y + 15;
+      labels.forEach(l => { g += `<text class="lbl" x="${l.x + 8}" y="${l.y + 4}">${l.name}</text>`; });
+    }
+    g += `<g class="hov"></g>`;
+    svg.innerHTML = g;
+    const hov = svg.querySelector(".hov");
+    svg.onpointermove = ev => {
+      const rect = svg.getBoundingClientRect(), sc = W / rect.width, px = (ev.clientX - rect.left) * sc;
+      const xs = series[0].pts.map(p => p[0]);
+      let best = 0; xs.forEach((x, i) => { if (Math.abs(X(x) - px) < Math.abs(X(xs[best]) - px)) best = i; });
+      const xv = xs[best];
+      hov.innerHTML = `<line x1="${X(xv)}" x2="${X(xv)}" y1="${m.t}" y2="${H - m.b}" stroke="#999"></line>` +
+        series.map(s => { const p = s.pts.find(q => q[0] === xv); return p ? `<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="5" fill="${s.color}" stroke="#fff" stroke-width="2"></circle>` : ""; }).join("");
+      tip.innerHTML = opts.tip(xv, series);
+      const wr = wrap.getBoundingClientRect();
+      let tx = ev.clientX - wr.left + 14; if (tx + 210 > wr.width) tx = ev.clientX - wr.left - 214;
+      tip.style.left = tx + "px"; tip.style.top = "10px"; tip.style.opacity = 1;
+    };
+    svg.onpointerleave = () => { hov.innerHTML = ""; tip.style.opacity = 0; };
+  }
+  function drawCal() {
+    const C = FC.backtest.calibration;
+    const series = ["goals", "elo", "market"].map(k => ({ name: MODEL_NAME[k].replace(" (Bet365)", ""), color: MODEL_COL[k], dash: k === "market", key: k,
+      pts: C[k].map(b => [b.predicted, b.actual, b.n]) }));
+    lineChart("cal", "cal-tip", "cal-wrap", series, {
+      x0: 0, x1: 1, y0: 0, y1: 1, diagonal: true, xLabel: "Forecast chance",
+      yTicks: [0, 0.2, 0.4, 0.6, 0.8, 1], yFmt: v => pct(v), xTicks: [[0, "0%"], [0.2, "20%"], [0.4, "40%"], [0.6, "60%"], [0.8, "80%"], [1, "100%"]],
+      tip: (xv, ss) => {
+        return `<div class="t">Forecast about ${pct(xv)}</div>` + ss.map(s => {
+          const p = s.pts.reduce((a, b) => Math.abs(b[0] - xv) < Math.abs(a[0] - xv) ? b : a);
+          return `<div class="m"><span class="key" style="background:${s.color}"></span>${s.name}: said ${pct(p[0])}, happened ${pct(p[1])} <span class="rng">(${p[2].toLocaleString("en-GB")})</span></div>`;
+        }).join("");
+      } });
+  }
+  function drawRps() {
+    const Ss = FC.backtest.seasons.filter(s => s.n >= 100);
+    const series = ["goals", "elo", "market"].map(k => ({ name: MODEL_NAME[k].replace(" (Bet365)", ""), color: MODEL_COL[k], dash: k === "market",
+      pts: Ss.map((s, i) => [i, s[k]]) }));
+    const all = Ss.flatMap(s => [s.goals, s.elo, s.market]);
+    const y0 = Math.floor(Math.min(...all) * 100) / 100, y1 = Math.ceil(Math.max(...all) * 100) / 100;
+    const ticks = []; for (let v = y0; v <= y1 + 1e-9; v += 0.005) ticks.push(+v.toFixed(3));
+    const every = wrapW() < 560 ? 4 : 2;
+    lineChart("rps", "rps-tip", "rps-wrap", series, {
+      x0: 0, x1: Ss.length - 1, y0, y1, yTicks: ticks.filter((_, i) => i % 2 === 0), yFmt: v => v.toFixed(3),
+      xTicks: Ss.map((s, i) => [i, s.season.slice(2, 4) + "–" + s.season.slice(5)]).filter((_, i) => (Ss.length - 1 - i) % every === 0),
+      tip: (xv, ss) => `<div class="t">${Ss[xv].season.replace("-", "–")} season</div>` + ss.map(s => `<div class="m"><span class="key" style="background:${s.color}"></span>${s.name}: ${s.pts[xv][1].toFixed(3)}</div>`).join("") });
+  }
+  function wrapW() { return document.getElementById("rps-wrap").clientWidth; }
+
+  // ----- attack & defence -----
+  function renderAD() {
+    const A = D.ad; if (!A) return;
+    const rows = A.rows;
+    const lo = Math.floor(Math.min(...rows.map(r => r.net_lo)) * 2) / 2, hi = Math.ceil(Math.max(...rows.map(r => r.net_hi)) * 2) / 2;
+    const BW = window.innerWidth < 640 ? 150 : 240, BH = 18;
+    const bx = v => 4 + (v - lo) / (hi - lo) * (BW - 8);
+    const f2 = v => v.toFixed(2);
+    const sg = v => (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(2);
+    let ticks = "";
+    for (let v = Math.ceil(lo); v <= hi; v += 0.5) ticks += `<span style="position:absolute;left:${bx(v)}px;transform:translateX(-50%)">${v === 0 ? "0" : sg(v).replace(".00", "").replace(".50", ".5")}</span>`;
+    document.getElementById("net-head").innerHTML = `Goal difference per game<div style="position:relative;height:14px;width:${BW}px;font-weight:400;font-size:11px;margin-top:4px">${ticks}</div>`;
+    document.getElementById("ad-body").innerHTML = rows.map((r, i) => {
+      const c = colorOf(r.team) || "var(--text)";
+      const turn = r.churn == null ? `<span class="rng">promoted</span>` : `${Math.round(r.churn * 100)}%`;
+      return `<tr>
+        <td class="rank num">${i + 1}</td>
+        <td class="name">${short(r.team)}</td>
+        <td class="r num hide-sm">${f2(r.gf)}<br><span class="rng">${f2(r.gf_lo)}–${f2(r.gf_hi)}</span></td>
+        <td class="r num hide-sm">${f2(r.ga)}<br><span class="rng">${f2(r.ga_lo)}–${f2(r.ga_hi)}</span></td>
+        <td><div class="netcell"><svg width="${BW}" height="${BH}" aria-label="${sg(r.net)} goals per game, range ${sg(r.net_lo)} to ${sg(r.net_hi)}">
+          <line x1="${bx(0)}" x2="${bx(0)}" y1="0" y2="${BH}" stroke="#cfcfcf"></line>
+          <rect x="${bx(r.net_lo)}" y="${BH / 2 - 3}" width="${bx(r.net_hi) - bx(r.net_lo)}" height="6" rx="3" fill="#d9d9d9"></rect>
+          <circle cx="${bx(r.net)}" cy="${BH / 2}" r="4.5" fill="${c}"></circle></svg>
+          <span class="num" style="font-size:13px">${sg(r.net)} <span class="rng">± ${f2(r.unc)}</span></span></div></td>
+        <td class="r num hide-sm">${turn}</td></tr>`;
+    }).join("");
+    const F = A.finding;
+    document.getElementById("finding").innerHTML = `<b>Does a big summer turnover make a club harder to read?</b> Less than you’d think. Across ${F.n} club-seasons since 2017–18, the third of clubs with the most turnover (${Math.round(F.high_churn * 100)}% of minutes gone, on average) changed by ${F.high_move.toFixed(2)} goals a game over the season. The third with the least (${Math.round(F.low_churn * 100)}%) changed by ${F.low_move.toFixed(2)}. Turnover matters most in August: those clubs start closer to average and with wider ranges, but within a couple of months their results have taken over. ${F.example}`;
+  }
+
+  // ----- peaks -----
+  document.getElementById("peaks").innerHTML = D.peaks.slice(0, 5).map((p, i) =>
+    `<tr><td class="rank num">${i + 1}</td><td class="name">${p.team}</td><td class="r num"><b>${p.elo.toFixed(0)}</b></td><td class="r" style="color:var(--text-3)">${fmt(dayOf(p.date), { month: "long", year: "numeric" })}</td></tr>`).join("");
+
+  // ----- chart -----
+  const svg = document.getElementById("chart"), wrap = document.getElementById("chart-wrap"), tip = document.getElementById("tip");
+  const NS = "http://www.w3.org/2000/svg";
+  let range = "all", geom = null;
+  const seasonStart = {};
+  D.history.forEach(h => h.forEach(p => { if (p[2] === -1) { const s = seasons[p[6]]; if (seasonStart[s] == null || p[0] < seasonStart[s]) seasonStart[s] = p[0]; } }));
+  const currentSet = new Set(tbl.map(r => r.team));
+  document.querySelectorAll("[data-range]").forEach(b => b.addEventListener("click", () => {
+    range = b.dataset.range;
+    document.querySelectorAll("[data-range]").forEach(x => x.setAttribute("aria-pressed", x === b));
+    drawChart();
+  }));
+
+  function drawChart() {
+    const W = wrap.clientWidth, H = Math.round(Math.max(300, Math.min(460, W * 0.55)));
+    const m = { l: 40, r: W < 560 ? 10 : 96, t: 10, b: 26 };
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("height", H);
+    const x0 = range === "all" ? seasonStart[seasons[0]] : seasonStart[seasons[seasons.length - (range === "5" ? 5 : 1)]];
+    const x1 = D.updated;
+    const vis = D.history.map(h => h.filter(p => p[0] >= x0));
+    let lo = Infinity, hi = -Infinity;
+    vis.forEach(v => v.forEach(p => { lo = Math.min(lo, p[1]); hi = Math.max(hi, p[1]); }));
+    lo = Math.floor((lo - 10) / 50) * 50; hi = Math.ceil((hi + 10) / 50) * 50;
+    const X = d => m.l + (d - x0) / (x1 - x0) * (W - m.l - m.r);
+    const Y = r => m.t + (hi - r) / (hi - lo) * (H - m.t - m.b);
+    const pathFor = pts => { let s = "", prev = null; for (const p of pts) { s += (!prev || (p[2] === -1 && p[6] - prev[6] > 1) ? "M" : "L") + X(p[0]).toFixed(1) + "," + Y(p[1]).toFixed(1); prev = p; } return s; };
+    svg.innerHTML = "";
+    const layer = () => svg.appendChild(document.createElementNS(NS, "g"));
+    const grid = layer(); grid.setAttribute("class", "grid");
+    const step = hi - lo > 300 ? 100 : 50;
+    let gh = "";
+    for (let v = lo; v <= hi; v += step) gh += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(v)}" y2="${Y(v)}"></line><text x="${m.l - 6}" y="${Y(v) + 4}" text-anchor="end">${v}</text>`;
+    if (lo < 1500 && hi > 1500) gh += `<line class="avg" x1="${m.l}" x2="${W - m.r}" y1="${Y(1500)}" y2="${Y(1500)}"></line>`;
+    if (range === "1") {
+      const d0 = toDate(x0);
+      for (let k = 0; k < 12; k++) {
+        const ms = Date.UTC(d0.getUTCFullYear(), d0.getUTCMonth() + k, 1), d = Math.round((ms - EPOCH) / 864e5);
+        if (d >= x0 && d <= x1) gh += `<text x="${X(d)}" y="${H - 6}" text-anchor="middle">${new Date(ms).toLocaleDateString("en-GB", { month: "short", timeZone: "UTC" })}</text>`;
+      }
+    } else {
+      const every = range === "all" ? (W < 560 ? 4 : 2) : 1;
+      seasons.forEach((s, i) => {
+        const d = seasonStart[s];
+        if (d < x0 || (seasons.length - 1 - i) % every || X(d) + 58 > W) return;
+        gh += `<text x="${X(d)}" y="${H - 6}">${s.slice(0, 4)}–${s.slice(5)}</text>`;
+      });
+    }
+    grid.innerHTML = gh;
+    const bg = layer(), fg = layer(), hover = layer(), labels = layer();
+    let bgh = "";
+    vis.forEach((pts, ti) => { if (pts.length && !colorOf(T[ti])) bgh += `<path class="team" d="${pathFor(pts)}" stroke="${currentSet.has(T[ti]) ? "var(--line)" : "var(--line-old)"}" stroke-width="1"></path>`; });
+    bg.innerHTML = bgh;
+    const lab = [];
+    let fgh = "";
+    selected.forEach(s => {
+      const pts = vis[T.indexOf(s.team)]; if (!pts.length) return;
+      fgh += `<path class="team" d="${pathFor(pts)}" stroke="${COLORS[s.slot]}" stroke-width="2"></path>`;
+      const last = pts[pts.length - 1];
+      lab.push({ x: X(last[0]), y: Y(last[1]), ly: Y(last[1]), team: s.team, c: COLORS[s.slot] });
+    });
+    fg.innerHTML = fgh;
+    lab.sort((a, b) => a.ly - b.ly);
+    for (let i = 1; i < lab.length; i++) if (lab[i].ly - lab[i - 1].ly < 16) lab[i].ly = lab[i - 1].ly + 16;
+    labels.innerHTML = lab.map(l => `<circle cx="${l.x}" cy="${l.y}" r="3.5" fill="${l.c}"></circle>` + (W >= 560 ? `<text class="lbl" x="${l.x + 8}" y="${l.ly + 4}">${short(l.team)}</text>` : "")).join("");
+    geom = { X, Y, x0, x1, m, W, H, vis, hover, pathFor };
+  }
+
+  function bisect(pts, d) { let a = 0, b = pts.length - 1; while (a < b) { const k = (a + b) >> 1; if (pts[k][0] < d) a = k + 1; else b = k; } return a; }
+  let hovered = null;
+  function onMove(ev) {
+    if (!geom) return;
+    const rect = svg.getBoundingClientRect(), sc = geom.W / rect.width;
+    const px = (ev.clientX - rect.left) * sc, py = (ev.clientY - rect.top) * sc;
+    if (px < geom.m.l || px > geom.W - geom.m.r + 6) return hide();
+    const d = geom.x0 + (px - geom.m.l) / (geom.W - geom.m.l - geom.m.r) * (geom.x1 - geom.x0);
+    let best = null, bd = Infinity;
+    geom.vis.forEach((pts, ti) => {
+      if (!pts.length || d < pts[0][0] - 20 || d > pts[pts.length - 1][0] + 20) return;
+      const i = bisect(pts, d);
+      for (const j of [i - 1, i]) {
+        const p = pts[j]; if (!p) continue;
+        const dx = geom.X(p[0]) - px, dy = geom.Y(p[1]) - py;
+        const dist = (dx * dx * 0.25 + dy * dy) * (colorOf(T[ti]) ? 0.6 : 1);
+        if (dist < bd) { bd = dist; best = { p, ti, j }; }
+      }
+    });
+    if (!best || bd > 900) return hide();
+    const { p, ti, j } = best, team = T[ti], c = colorOf(team);
+    hovered = team;
+    geom.hover.innerHTML = (c ? "" : `<path class="team" d="${geom.pathFor(geom.vis[ti])}" stroke="#555" stroke-width="1.5"></path>`) +
+      `<circle cx="${geom.X(p[0])}" cy="${geom.Y(p[1])}" r="4" fill="${c || "#555"}" stroke="#fff" stroke-width="1.5"></circle>`;
+    const prev = geom.vis[ti][j - 1];
+    const what = p[2] === -1 ? `Start of ${seasons[p[6]].replace("-", "–")} season` :
+      `${p[5] ? "v" : "at"} ${short(T[p[2]])}, ${p[3]}–${p[4]}`;
+    const ch = p[2] !== -1 && prev ? " " + arrow(p[1] - prev[1]) : "";
+    tip.innerHTML = `<div class="t">${team}</div><div class="num">Elo ${p[1].toFixed(0)}${ch}</div><div class="m">${what}</div><div class="d">${fmt(p[0])}</div>`;
+    const wr = wrap.getBoundingClientRect();
+    let tx = ev.clientX - wr.left + 12, ty = ev.clientY - wr.top + 12;
+    if (tx + 200 > wr.width) tx = ev.clientX - wr.left - 200;
+    if (ty + 90 > wr.height) ty = ev.clientY - wr.top - 96;
+    tip.style.left = tx + "px"; tip.style.top = ty + "px"; tip.style.opacity = 1;
+  }
+  function hide() { hovered = null; tip.style.opacity = 0; if (geom) geom.hover.innerHTML = ""; }
+  svg.addEventListener("pointermove", onMove);
+  svg.addEventListener("pointerleave", hide);
+  svg.addEventListener("click", ev => { onMove(ev); if (hovered && !colorOf(hovered)) { select(hovered); renderAll(); } });
+
+  function renderAll() { renderTable(); renderLegend(); renderAD(); drawChart(); }
+  renderTopPlayers(); renderBestGames(); renderNext(); renderAccuracy();
+  let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { drawChart(); renderAD(); if (FC && FC.backtest) { drawCal(); drawRps(); } }, 120); });
+
+  select(tbl[0].team); select(tbl[1].team);
+  renderAll();
+})();
+</script>
+</body>
+</html>

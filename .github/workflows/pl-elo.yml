@@ -1,0 +1,39 @@
+name: PL Elo (live)
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pl-elo
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild from the FPL API
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: bash run.sh
+      - name: Commit if anything changed
+        run: |
+          git config user.name "datacor-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data public raw
+          if git diff --cached --quiet; then
+            echo "No new data."
+          else
+            git commit -m "PL Elo: data to $(cat data/as_of.txt)"
+            git push
+          fi
