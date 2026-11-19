@@ -197,11 +197,11 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 669,499857,6,8,1,Sharman-Lowe,Teddy,Sharman-Lowe,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 670,616109,6,8,2,Subuloye,Olutayo,Subuloye,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 91,231065,7,9,2,Pinnock,Ethan,Pinnock,a,,,732,8,0,0,0.17,0.21,0.38,13.07,16,0,39,95,1
-104,428580,7,9,3,Onyeka,Frank,Onyeka,d,Groin injury - 50% chance of playing,50,379,4,0,0,0.06,0.23,0.29,6.88,9,0,53,39,1
+104,428580,7,9,3,Onyeka,Frank,Onyeka,d,Groin injury - 75% chance of playing,75,379,4,0,0,0.06,0.23,0.29,6.88,9,0,53,39,1
 110,472739,7,9,1,Rushworth,Carl,Rushworth,a,,,900,10,0,1,0.00,0.03,0.03,15.13,19,22,91,0,1
 171,484389,7,9,1,Dovin,Oliver,Dovin,u,not included in squad.,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 172,110690,7,9,1,Wilson,Ben,Wilson,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-173,461102,7,9,2,Thomas,Bobby,Thomas,d,Calf injury - 50% chance of playing,50,676,8,0,0,0.60,0.37,0.97,11.15,13,0,103,88,2
+173,461102,7,9,2,Thomas,Bobby,Thomas,d,Calf injury - 75% chance of playing,75,676,8,0,0,0.60,0.37,0.97,11.15,13,0,103,88,2
 174,436761,7,9,2,Kitching,Liam,Kitching,u,Has joined Sheffield United on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 175,451284,7,9,2,van Ewijk,Milan,van Ewijk,a,,100,810,9,0,1,0.01,0.58,0.59,14.03,19,0,62,72,0
 176,173878,7,9,2,Dasilva,Jay,Dasilva,a,,,894,10,1,1,0.53,0.76,1.29,15.13,19,0,82,46,1
@@ -221,7 +221,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 190,469272,7,9,3,Tchaouna,Loum,Tchaouna,a,,,215,2,0,0,0.39,0.18,0.57,3.28,3,0,34,18,0
 191,492498,7,9,3,Borges Rodrigues,Raphael,Borges Rodrigues,u,Has joined Burton Albion on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 192,629397,7,9,3,Andrews,Kai,Andrews,u,Has joined Oxford United on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-193,176412,7,9,4,Wright,Haji,Wright,i,Thigh injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
+193,176412,7,9,4,Wright,Haji,Wright,i,Lack of match fitness - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 194,230730,7,9,4,Thomas-Asante,Brandon,Thomas-Asante,a,,,495,5,0,2,0.64,0.08,0.71,8.56,10,0,103,49,2
 195,218997,7,9,4,Simms,Ellis,Simms,a,,,116,1,1,0,0.40,0.01,0.41,2.99,3,0,42,3,0
 196,551262,7,9,4,Markelo,Jahnoah,Markelo,u,Has joined Shabab Al-Ahli Dubai permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -406,11 +406,11 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 327,434752,13,2,2,Bijol,Jaka,Bijol,a,,,258,3,0,0,0.13,0.00,0.13,4.40,2,0,58,39,2
 329,214225,13,2,2,Rodon,Joe,Rodon,a,,100,124,2,0,0,0.03,0.06,0.09,1.42,0,0,28,11,1
 330,226182,13,2,2,Bogle,Jayden,Bogle,a,,,810,10,2,0,1.76,0.82,2.58,8.15,6,0,188,30,6
-331,243526,13,2,2,Gudmundsson,Gabriel,Gudmundsson,d,Hamstring injury - 75% chance of playing,75,631,8,0,1,0.09,0.30,0.39,8.80,5,0,120,33,3
+331,243526,13,2,2,Gudmundsson,Gabriel,Gudmundsson,a,,100,631,8,0,1,0.09,0.30,0.39,8.80,5,0,120,33,3
 332,220627,13,2,2,Justin,James,Justin,a,,,881,10,1,0,0.48,1.18,1.66,11.02,7,0,182,78,4
 333,437738,13,2,2,Bornauw,Sebastiaan,Bornauw,u,Has joined Hamburg SV on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 334,522047,13,2,2,Muharemović,Tarik,Muharemović,a,,,900,10,0,2,0.65,0.24,0.89,12.55,8,0,189,112,4
-335,466525,13,2,3,Stach,Anton,Stach,d,Foot injury - 50% chance of playing,50,676,7,1,0,1.50,0.53,2.03,10.28,6,0,123,75,3
+335,466525,13,2,3,Stach,Anton,Stach,a,,100,676,7,1,0,1.50,0.53,2.03,10.28,6,0,123,75,3
 336,435997,13,2,3,Okafor,Noah,Okafor,a,,100,480,6,2,0,0.85,0.44,1.29,5.00,4,0,125,26,3
 337,427637,13,2,3,Aaronson,Brenden,Aaronson,a,,,283,3,0,0,0.01,0.02,0.03,5.96,4,0,47,21,2
 338,199598,13,2,3,Ampadu,Ethan,Ampadu,a,,,900,10,0,1,0.25,0.50,0.75,12.55,8,0,142,114,4
@@ -585,7 +585,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 478,470315,18,17,2,Netz,Luca,Netz,a,,,58,0,0,0,0.00,0.03,0.03,0.30,1,0,9,3,0
 479,538638,18,17,2,Bindon,Tyler,Bindon,u,Has joined Charlton Athletic on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 480,222531,18,17,3,Gibbs-White,Morgan,Gibbs-White,a,,100,810,9,1,3,2.54,2.36,4.90,9.86,12,0,189,45,1
-482,209046,18,17,3,Hudson-Odoi,Callum,Hudson-Odoi,a,,100,45,0,0,0,0.11,0.08,0.19,0.31,0,0,15,4,0
+482,209046,18,17,3,Hudson-Odoi,Callum,Hudson-Odoi,i,Unspecified injury - Unknown return date,0,45,0,0,0,0.11,0.08,0.19,0.31,0,0,15,4,0
 483,456512,18,17,3,Ndoye,Dan,Ndoye,a,,100,616,9,2,0,2.33,1.36,3.69,7.62,8,0,84,29,2
 484,503301,18,17,3,Hutchinson,Omari,Hutchinson,u,Has joined AC Milan on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 485,476887,18,17,3,Bakwa,Dilane,Bakwa,u,Has joined Lille on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -656,7 +656,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 541,93605,20,56,2,Meunier,Thomas,Meunier,a,,100,534,7,0,1,0.49,0.61,1.10,7.30,8,0,68,28,2
 542,484420,20,56,3,E.Le Fée,Enzo,Le Fée,a,,,863,10,3,1,3.83,1.86,5.69,15.58,15,0,197,59,3
 543,547027,20,56,3,Diarra,Habib,Diarra,i,Muscular injury - Unknown return date,0,70,0,0,1,0.03,0.16,0.19,1.60,1,0,25,3,0
-544,84450,20,56,3,Xhaka,Granit,Xhaka,d,Calf injury - 75% chance of playing,75,813,10,0,1,0.15,1.82,1.97,15.75,17,0,185,97,2
+544,84450,20,56,3,Xhaka,Granit,Xhaka,i,Calf injury - Unknown return date,0,813,10,0,1,0.15,1.82,1.97,15.75,17,0,185,97,2
 545,577669,20,56,3,Sadiki,Noah,Sadiki,a,,,844,10,0,0,0.44,0.41,0.85,13.98,16,0,153,67,3
 546,535818,20,56,3,Adingra,Simon,Adingra,u,Has joined Ajax on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 547,461199,20,56,3,Mundle,Romaine,Mundle,i,Knee injury - Unknown return date,0,1,0,0,0,0.17,0.00,0.17,0.09,0,0,2,1,0
@@ -664,7 +664,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 549,549912,20,56,3,Talbi,Chemsdine,Talbi,a,,,162,1,0,0,0.27,0.34,0.61,1.38,1,0,17,7,1
 550,699989,20,56,3,Jocelin.T,Djiamgone Jocelin Ta,Bi,a,,,17,0,0,0,0.00,0.03,0.03,0.47,1,0,4,0,0
 551,536661,20,56,3,N.Angulo,Nilson,Angulo,a,,,521,8,1,1,0.79,0.26,1.04,6.36,11,0,99,38,2
-552,441264,20,56,4,Brobbey,Brian,Brobbey,d,Muscular injury - 75% chance of playing,75,619,8,3,1,4.21,0.13,4.34,9.58,12,0,130,21,3
+552,441264,20,56,4,Brobbey,Brian,Brobbey,i,Muscular injury - Unknown return date,0,619,8,3,1,4.21,0.13,4.34,9.58,12,0,130,21,3
 553,437505,20,56,4,Isidor,Wilson,Isidor,a,,100,263,1,1,1,2.24,0.05,2.29,5.70,5,0,63,11,0
 612,638411,20,56,2,Methalie,Dayann,Méthalie,a,,100,107,1,0,0,0.03,0.01,0.04,3.29,6,0,-7,5,0
 613,696104,20,56,3,Ahoka,Jules,Ahoka,a,,,111,0,0,0,0.00,0.02,0.02,1.26,0,0,22,15,1
