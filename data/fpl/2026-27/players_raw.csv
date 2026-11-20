@@ -180,7 +180,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 156,247632,6,8,3,Neto,Pedro,Lomba Neto,a,,,738,9,3,1,1.82,1.00,2.82,12.08,12,0,191,59,2
 157,624773,6,8,3,Estêvão,Estêvão,Almeida de Oliveira Gonçalves,a,,,178,1,0,0,0.37,0.69,1.06,3.05,3,0,52,13,1
 158,463936,6,8,3,Gittens,Jamie,Bynoe-Gittens,i,Ankle injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-159,486672,6,8,3,Caicedo,Moisés,Caicedo Corozo,a,,100,440,5,0,0,0.05,0.09,0.14,6.13,4,0,83,43,2
+159,486672,6,8,3,Caicedo,Moisés,Caicedo Corozo,d,Unspecified injury - 75% chance of playing,75,440,5,0,0,0.05,0.09,0.14,6.13,4,0,83,43,2
 161,514356,6,8,3,Lavia,Roméo,Lavia,a,,,457,6,1,1,0.77,0.15,0.92,8.73,9,0,123,70,1
 163,491007,6,8,3,D.Essugo,Dário,Luís Essugo,u,Has joined RC Strasbourg on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 164,593117,6,8,3,Quenda,Geovany,Quenda,a,,100,111,1,0,0,0.07,0.02,0.09,1.85,2,0,26,8,1
@@ -214,7 +214,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 183,480457,7,9,3,Rudoni,Jack,Rudoni,a,,100,730,9,3,0,2.23,1.68,3.91,10.72,12,0,173,68,2
 184,168144,7,9,3,Grimes,Matt,Grimes,a,,,716,8,0,0,0.17,0.24,0.41,11.61,14,0,103,59,1
 185,501459,7,9,3,Sakamoto,Tatsuhiro,Sakamoto,a,,,398,4,1,0,0.54,0.09,0.63,5.46,9,0,70,34,0
-186,241293,7,9,3,Mason-Clark,Ephron,Mason-Clark,a,,100,326,5,0,0,0.51,0.37,0.88,4.92,5,0,34,18,1
+186,241293,7,9,3,Mason-Clark,Ephron,Mason-Clark,d,Knee injury - 75% chance of playing,75,326,5,0,0,0.51,0.37,0.88,4.92,5,0,34,18,1
 187,439668,7,9,3,Eccles,Josh,Eccles,i,Ankle injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 188,226965,7,9,3,Torp,Victor,Torp,a,,,227,2,0,1,0.23,0.33,0.56,4.53,6,0,56,25,0
 189,684268,7,9,3,Shepherd,George,Shepherd,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -227,7 +227,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 196,551262,7,9,4,Markelo,Jahnoah,Markelo,u,Has joined Shabab Al-Ahli Dubai permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 197,549653,7,9,4,Bassette,Norman,Bassette,u,Has joined KVC Westerlo on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 492,210156,7,9,4,Awoniyi,Taiwo,Awoniyi,a,,100,442,5,1,0,1.94,0.05,1.99,6.96,13,0,59,19,0
-575,661888,7,9,3,Yirenkyi,Caleb,Yirenkyi,a,,,647,8,0,0,0.15,0.20,0.35,10.18,12,0,79,65,3
+575,661888,7,9,3,Yirenkyi,Caleb,Yirenkyi,d,Unspecified injury - 75% chance of playing,75,647,8,0,0,0.15,0.20,0.35,10.18,12,0,79,65,3
 584,196100,7,9,3,Hamer,Gustavo,Hamer,a,,,52,0,0,0,0.00,0.24,0.24,1.09,2,0,20,3,0
 599,627221,7,9,4,Cherif,Sidiki,Cherif,a,,,253,3,1,1,0.39,0.02,0.41,4.33,6,0,67,8,1
 623,79602,7,9,1,Bentley,Dan,Bentley,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -243,7 +243,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 205,218364,8,31,2,Sosa,Borna,Sosa,u,Has joined FC Cologne on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 206,515621,8,31,2,Chadi Riad,Chadi,Riad Dnanou,i,Knee injury - Unknown return date,0,72,1,0,0,0.00,0.01,0.01,0.98,2,0,7,7,0
 207,242313,8,31,2,Mingueza,Oscar,Mingueza,a,,,161,2,0,0,0.00,0.11,0.11,4.17,4,0,9,12,0
-208,232185,8,31,3,Sarr,Ismaïla,Sarr,i,Groin injury - Expected back 21 Nov,0,15,0,0,0,0.00,0.01,0.01,0.18,0,0,6,2,0
+208,232185,8,31,3,Sarr,Ismaïla,Sarr,i,Groin injury - Expected back 29 Nov,0,15,0,0,0,0.00,0.01,0.01,0.18,0,0,6,2,0
 210,496221,8,31,3,Wharton,Adam,Wharton,a,,100,883,10,0,1,0.41,1.38,1.79,20.74,23,0,153,80,1
 211,488024,8,31,3,Yeremy,Yéremy,Pino Santos,a,,,684,9,1,2,1.61,1.16,2.77,15.94,16,0,138,52,1
 212,108413,8,31,3,Hughes,Will,Hughes,a,,,40,0,0,0,0.00,0.04,0.04,2.64,2,0,15,7,0
@@ -262,7 +262,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 225,660392,8,31,4,Uche,Christantus,Uche,u,has returned to Getafe CF,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 241,433154,8,31,3,McNeil,Dwight,McNeil,a,,,271,3,0,0,0.22,0.26,0.48,6.42,10,0,47,26,0
 555,169593,8,31,1,Matthews,Remi,Matthews,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-577,223723,8,31,2,Tomiyasu,Takehiro,Tomiyasu,i,Calf injury - Expected back 21 Nov,0,189,2,0,0,0.00,0.03,0.03,3.98,5,0,10,17,0
+577,223723,8,31,2,Tomiyasu,Takehiro,Tomiyasu,i,Calf injury - Expected back 29 Nov,0,189,2,0,0,0.00,0.03,0.03,3.98,5,0,10,17,0
 588,570794,8,31,2,Khalaili,Anan,Khalaili,a,,100,682,7,1,0,1.24,0.65,1.89,16.97,18,0,58,73,1
 595,559152,8,31,3,Gozo,Zavier,Gozo,a,,,28,0,0,0,0.00,0.00,0.00,0.68,2,0,6,1,0
 633,605972,8,31,2,Ahanor,Honest,Ahanor,a,,,160,2,0,0,0.00,0.01,0.01,3.17,7,0,10,19,0
