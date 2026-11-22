@@ -1,5 +1,5 @@
 id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,chance_of_playing_next_round,minutes,starts,goals_scored,assists,expected_goals,expected_assists,expected_goal_involvements,expected_goals_conceded,goals_conceded,saves,bps,defensive_contribution,clean_sheets
-1,154561,1,3,1,Raya,David,Raya Martín,d,Unspecified injury - 75% chance of playing,75,969,11,0,0,0.00,0.01,0.01,9.07,7,21,237,0,7
+1,154561,1,3,1,Raya,David,Raya Martín,d,Shoulder injury - 75% chance of playing,75,969,11,0,0,0.00,0.01,0.01,9.07,7,21,237,0,7
 2,109745,1,3,1,Arrizabalaga,Kepa,Arrizabalaga Revuelta,a,,,20,0,0,0,0.00,0.00,0.00,0.24,0,0,4,0,0
 3,437495,1,3,1,Meslier,Illan,Meslier,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 4,226597,1,3,2,Gabriel,Gabriel,dos Santos Magalhães,a,,,990,11,1,0,1.47,0.26,1.73,9.32,7,0,232,97,7
@@ -18,7 +18,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 17,195384,1,3,3,Merino,Mikel,Merino Zazón,a,,,203,1,0,0,0.82,0.36,1.18,2.04,0,0,51,23,1
 18,444145,1,3,3,Martinelli,Gabriel,Martinelli Silva,u,Has joined Al Hilal permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 19,481655,1,3,3,Zubimendi,Martín,Zubimendi Ibáñez,i,Hamstring injury - Unknown return date,0,100,0,0,0,0.21,0.05,0.26,1.58,0,0,21,12,0
-20,616077,1,3,3,Dowman,Max,Dowman,s,Suspended until 29 Nov,0,19,0,0,0,0.00,0.09,0.09,0.51,0,0,7,0,0
+20,616077,1,3,3,Dowman,Max,Dowman,a,,100,19,0,0,0,0.00,0.09,0.09,0.51,0,0,7,0,0
 22,499175,1,3,3,Nwaneri,Ethan,Nwaneri,u,Has joined Borussia Dortmund on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 23,438098,1,3,3,Fábio Vieira,Fábio,Ferreira Vieira,u,Has joined Hamburger SV permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 24,200641,1,3,3,Nelson,Reiss,Nelson,u,has departed the club as a free agent.,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -32,65 +32,65 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 30,101188,2,7,2,Digne,Lucas,Digne,u,Has joined Paris Saint-Germain permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 32,199796,2,7,2,Cash,Matty,Cash,i,Concussion - Expected back 28 Nov,0,656,7,0,0,0.21,0.22,0.43,11.80,11,0,59,53,2
 33,149484,2,7,2,Mings,Tyrone,Mings,a,,,441,4,0,0,0.20,0.03,0.23,6.48,6,0,68,39,2
-34,244954,2,7,2,Pau,Pau,Torres,a,,100,560,7,0,0,0.38,0.08,0.46,12.83,11,0,36,38,1
+34,244954,2,7,2,Pau,Pau,Torres,a,,100,560,7,0,0,0.38,0.08,0.46,12.82,11,0,36,40,1
 35,515597,2,7,3,Bogarde,Lamare,Bogarde,a,,,16,0,0,0,0.00,0.00,0.00,0.22,0,0,3,1,0
-36,441302,2,7,2,Maatsen,Ian,Maatsen,a,,100,695,8,0,0,0.46,0.59,1.05,14.15,13,0,63,44,2
+36,441302,2,7,2,Maatsen,Ian,Maatsen,a,,100,695,8,0,0,0.46,0.56,1.02,14.14,13,0,64,44,2
 37,184667,2,7,2,Lindelöf,Victor,Lindelöf,d,Illness - 75% chance of playing,75,900,10,0,0,0.44,0.18,0.62,18.62,17,0,79,72,2
 38,606798,2,7,2,A.García,Andrés,García,u,Has joined Getafe on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 39,578545,2,7,2,Nedeljkovic,Kosta,Nedeljkovic,u,Has joined Rangers on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-41,195546,2,7,3,Buendía,Emiliano,Buendía Stati,a,,,642,8,1,1,1.79,0.61,2.40,9.88,9,0,130,66,2
+41,195546,2,7,3,Buendía,Emiliano,Buendía Stati,a,,,642,8,1,1,1.79,0.65,2.44,9.88,9,0,130,66,2
 44,215711,2,7,3,Bailey,Leon,Bailey,u,Has joined Olympiakos permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-45,122806,2,7,3,McGinn,John,McGinn,a,,,820,9,2,4,3.29,0.94,4.23,15.94,13,0,187,70,2
+45,122806,2,7,3,McGinn,John,McGinn,a,,,820,9,2,4,3.32,0.99,4.31,15.92,13,0,187,70,2
 46,88894,2,7,3,Barkley,Ross,Barkley,a,,100,401,4,0,0,0.66,0.20,0.86,9.94,10,0,94,35,1
-47,226944,2,7,3,Kamara,Boubacar,Kamara,a,,100,971,11,0,1,0.21,0.40,0.61,17.95,15,0,182,112,4
+47,226944,2,7,3,Kamara,Boubacar,Kamara,a,,100,971,11,0,1,0.21,0.40,0.61,17.94,15,0,182,112,4
 48,449871,2,7,3,Onana,Amadou,Onana,i,Knee injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 49,469247,2,7,3,Iling Jr,Samuel,Iling-Junior,u,Has joined Bolton Wanderers on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 50,645618,2,7,3,Burrowes,Bradley,Burrowes,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 51,577285,2,7,3,George Hemmings,George,Hemmings,a,,100,316,4,0,0,0.07,0.18,0.25,7.57,9,0,38,21,1
-52,653481,2,7,3,Alysson,Alysson Edward Franco,da Rocha dos Santos,a,,100,419,5,2,2,0.56,0.09,0.65,8.26,6,0,116,32,1
-53,614071,2,7,3,Manzambi,Johan,Manzambi,a,,100,520,7,2,3,1.73,0.90,2.63,8.42,7,0,170,42,2
+52,653481,2,7,3,Alysson,Alysson Edward Franco,da Rocha dos Santos,a,,100,419,5,2,2,0.56,0.09,0.65,8.25,6,0,117,32,1
+53,614071,2,7,3,Manzambi,Johan,Manzambi,a,,100,520,7,2,3,1.81,0.90,2.71,8.42,7,0,170,42,2
 54,448089,2,7,3,Gomes,Joao,Gomes,a,,100,402,5,0,1,0.00,0.29,0.29,8.47,11,0,67,41,1
 55,178301,2,7,4,Watkins,Ollie,Watkins,u,Has joined Al Hilal permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 56,173879,2,7,4,Abraham,Tammy,Abraham,a,,100,71,0,0,0,0.00,0.00,0.00,2.69,3,0,13,2,0
 160,493105,2,7,3,Garnacho,Alejandro,Garnacho Ferreyra,a,,,34,0,0,0,0.09,0.05,0.14,0.49,0,0,14,2,0
-166,517052,2,7,4,N.Jackson,Nicolas,Jackson,a,,,794,10,6,1,3.61,1.13,4.74,10.79,8,0,254,27,3
+166,517052,2,7,4,N.Jackson,Nicolas,Jackson,a,,,794,10,6,1,3.56,1.13,4.69,10.77,8,0,255,27,3
 582,690838,2,7,4,Madjo,Brian,Madjo,a,,100,29,0,0,0,0.00,0.00,0.00,1.63,2,0,9,2,0
 596,487992,2,7,2,Ruggeri,Matteo,Ruggeri,i,Hamstring injury - Expected back 2 Jan,0,158,2,0,0,0.03,0.02,0.05,2.48,3,0,18,22,0
-597,433969,2,7,1,Suzuki,Zion,Suzuki,a,,,900,10,0,0,0.00,0.01,0.01,15.11,13,35,194,0,3
+597,433969,2,7,1,Suzuki,Zion,Suzuki,a,,,900,10,0,0,0.00,0.01,0.01,15.10,13,35,194,0,3
 606,569577,2,7,2,Rowe,Triston,Rowe,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 607,571380,2,7,3,Lynch,Luka,Lynch,u,Has joined Oxford United on loan until January,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-611,214590,2,7,2,Wan-Bissaka,Aaron,Wan-Bissaka,a,,100,363,4,0,0,0.00,0.14,0.14,4.72,3,0,82,38,2
-618,119090,2,7,3,Goretzka,Leon,Goretzka,a,,100,240,3,1,0,0.63,0.22,0.85,5.07,3,0,56,25,1
-630,245719,2,7,2,Harwood-Bellis,Taylor,Harwood-Bellis,a,,,180,2,0,0,0.08,0.07,0.15,3.81,4,0,30,12,1
-631,638987,2,7,3,Mbaye,Ibrahim,Mbaye,a,,,174,0,0,1,0.37,0.43,0.80,4.72,6,0,51,15,0
+611,214590,2,7,2,Wan-Bissaka,Aaron,Wan-Bissaka,a,,100,363,4,0,0,0.00,0.14,0.14,4.71,3,0,83,39,2
+618,119090,2,7,3,Goretzka,Leon,Goretzka,a,,100,240,3,1,0,0.63,0.22,0.85,5.05,3,0,56,25,1
+630,245719,2,7,2,Harwood-Bellis,Taylor,Harwood-Bellis,a,,,180,2,0,0,0.08,0.07,0.15,3.80,4,0,30,13,1
+631,638987,2,7,3,Mbaye,Ibrahim,Mbaye,a,,,174,0,0,1,0.37,0.44,0.81,4.70,6,0,51,15,0
 667,481283,2,7,1,Wright,James,Wright,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 672,671103,2,7,2,Cissé,Modou Kéba,Cissé,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-57,457569,3,91,1,Petrović,Đorđe,Petrović,a,,,990,11,0,0,0.00,0.00,0.00,13.33,14,18,139,0,4
+57,457569,3,91,1,Petrović,Đorđe,Petrović,a,,,990,11,0,0,0.00,0.00,0.00,13.25,14,18,140,0,4
 58,40383,3,91,1,Forster,Fraser,Forster,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 59,444172,3,91,1,Dennis,Will,Dennis,u,Has joined MK Dons permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-60,463981,3,91,2,Hill,James,Hill,a,,,990,11,0,1,0.40,0.97,1.37,13.33,14,0,188,129,4
-61,494521,3,91,2,Truffert,Adrien,Truffert,a,,,983,11,0,1,0.17,1.04,1.21,13.33,14,0,167,80,4
-62,242882,3,91,2,Diakité,Bafodé,Diakité,a,,,20,0,0,0,0.00,0.00,0.00,0.50,0,0,19,6,0
+60,463981,3,91,2,Hill,James,Hill,a,,,990,11,0,1,0.40,0.97,1.37,13.25,14,0,188,129,4
+61,494521,3,91,2,Truffert,Adrien,Truffert,a,,,983,11,0,1,0.17,1.04,1.21,13.25,14,0,165,80,4
+62,242882,3,91,2,Diakité,Bafodé,Diakité,a,,,20,0,0,0,0.00,0.00,0.00,0.49,0,0,19,6,0
 63,620487,3,91,2,Milosavljević,Veljko,Milosavljevic,i,Thigh injury - Expected back 31 Oct,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-64,54469,3,91,2,Smith,Adam,Smith,a,,,933,11,0,0,0.58,0.46,1.04,12.57,14,0,98,41,4
+64,54469,3,91,2,Smith,Adam,Smith,a,,,933,11,0,0,0.58,0.46,1.04,12.50,14,0,98,41,4
 65,436893,3,91,2,J.Araujo,Julián,Araujo Zúñiga,i,Thigh injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 66,575901,3,91,2,Soler,Julio,Soler Barreto,a,,100,6,0,0,0,0.00,0.00,0.00,0.00,0,0,4,1,0
-67,499604,3,91,3,Rayan,Rayan Vitor,Simplício Rocha,a,,,963,11,1,0,3.22,0.74,3.96,12.44,13,0,121,62,4
-68,201658,3,91,3,Tavernier,Marcus,Tavernier,a,,,930,11,5,1,4.27,2.37,6.64,12.75,14,0,294,85,4
-69,503139,3,91,3,Scott,Alex,Scott,a,,100,467,5,1,2,0.71,0.42,1.13,8.18,7,0,132,61,1
-70,222683,3,91,3,Kluivert,Justin,Kluivert,a,,100,586,8,2,2,2.29,0.54,2.83,6.19,3,0,143,35,6
-71,155408,3,91,3,Cook,Lewis,Cook,a,,,398,4,0,1,0.08,0.34,0.42,7.64,2,0,70,39,4
-72,496208,3,91,3,Gannon-Doak,Ben,Gannon-Doak,a,,,86,0,0,0,0.12,0.30,0.42,2.07,4,0,38,17,0
-73,200785,3,91,3,Adams,Tyler,Adams,a,,100,795,9,0,0,0.18,0.15,0.33,7.76,13,0,112,105,4
+67,499604,3,91,3,Rayan,Rayan Vitor,Simplício Rocha,a,,,963,11,1,0,3.14,0.91,4.05,12.35,13,0,121,62,4
+68,201658,3,91,3,Tavernier,Marcus,Tavernier,a,,,930,11,5,1,4.27,2.36,6.63,12.67,14,0,294,85,4
+69,503139,3,91,3,Scott,Alex,Scott,a,,100,467,5,1,2,0.71,0.42,1.13,8.00,7,0,132,61,1
+70,222683,3,91,3,Kluivert,Justin,Kluivert,a,,100,586,8,2,2,2.27,0.54,2.81,6.29,3,0,143,35,6
+71,155408,3,91,3,Cook,Lewis,Cook,a,,,398,4,0,1,0.08,0.34,0.42,7.46,2,0,70,39,4
+72,496208,3,91,3,Gannon-Doak,Ben,Gannon-Doak,a,,,86,0,0,0,0.12,0.30,0.42,2.08,4,0,38,17,0
+73,200785,3,91,3,Adams,Tyler,Adams,a,,100,795,9,0,0,0.18,0.15,0.33,7.86,13,0,113,107,4
 74,111317,3,91,3,Brooks,David,Brooks,a,,100,90,1,0,0,0.00,0.08,0.08,1.18,4,0,13,8,0
-75,158499,3,91,3,Christie,Ryan,Christie,a,,100,480,6,0,1,1.07,0.83,1.90,4.63,7,0,108,71,4
+75,158499,3,91,3,Christie,Ryan,Christie,a,,100,480,6,0,1,1.07,0.83,1.90,4.73,7,0,108,71,4
 76,614574,3,91,3,Tóth.A,Alex,Tóth,i,Hamstring injury - Unknown return date,0,17,0,0,0,0.00,0.00,0.00,0.56,2,0,8,2,0
 77,489888,3,91,3,Adli,Amine,Adli,a,,100,21,0,1,0,0.49,0.07,0.56,0.44,0,0,38,3,0
-78,560262,3,91,3,Kroupi.Jr,Junior,Kroupi,a,,100,68,0,0,1,0.00,0.30,0.30,2.89,1,0,29,8,0
-79,444102,3,91,4,Evanilson,Francisco Evanilson,de Lima Barbosa,a,,,927,11,6,4,5.46,1.08,6.54,12.35,11,0,304,67,6
+78,560262,3,91,3,Kroupi.Jr,Junior,Kroupi,a,,100,68,0,0,1,0.00,0.30,0.30,2.71,1,0,29,8,0
+79,444102,3,91,4,Evanilson,Francisco Evanilson,de Lima Barbosa,a,,,927,11,6,4,5.57,1.07,6.64,12.27,11,0,304,67,6
 80,168636,3,91,4,Enes Ünal,Enes,Ünal,u,Has joined Getafe permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 81,561245,3,91,4,Rodríguez,Álvaro,Rodríguez,a,,100,58,0,0,0,0.41,0.05,0.46,0.50,1,0,20,6,0
-566,483067,3,91,2,Silva,António João,Pereira de Albuquerque Tavares da Silva,a,,,990,11,0,0,1.41,0.51,1.92,13.33,14,0,137,123,4
+566,483067,3,91,2,Silva,António João,Pereira de Albuquerque Tavares da Silva,a,,,990,11,0,0,1.41,0.51,1.92,13.25,14,0,137,122,4
 573,494928,3,91,2,Sanchez,Juanlu,Sánchez,i,Ankle injury - Unknown return date,0,18,0,0,0,0.00,0.00,0.00,0.00,0,0,4,1,0
 608,523700,3,91,4,Jebbison,Daniel,Jebbison,a,,,31,0,0,0,0.10,0.00,0.10,0.61,2,0,13,1,0
 615,230650,3,91,1,Di Gregorio,Michele,Di Gregorio,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -196,14 +196,14 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 662,636846,6,8,3,Nicoll-Jazuli,Mahdi,Nicoll-Jazuli,a,,,3,0,0,0,0.00,0.00,0.00,0.43,1,0,5,2,0
 669,499857,6,8,1,Sharman-Lowe,Teddy,Sharman-Lowe,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 670,616109,6,8,2,Subuloye,Olutayo,Subuloye,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-91,231065,7,9,2,Pinnock,Ethan,Pinnock,a,,,822,9,0,0,0.20,0.21,0.41,14.98,18,0,42,108,1
-104,428580,7,9,3,Onyeka,Frank,Onyeka,a,,100,398,4,0,0,0.13,0.23,0.36,7.01,9,0,59,43,1
-110,472739,7,9,1,Rushworth,Carl,Rushworth,a,,,990,11,0,1,0.00,0.03,0.03,17.04,21,25,105,0,1
+91,231065,7,9,2,Pinnock,Ethan,Pinnock,a,,,822,9,0,0,0.20,0.21,0.41,14.80,18,0,44,108,1
+104,428580,7,9,3,Onyeka,Frank,Onyeka,a,,100,398,4,0,0,0.14,0.23,0.37,6.99,9,0,59,43,1
+110,472739,7,9,1,Rushworth,Carl,Rushworth,a,,,990,11,0,1,0.00,0.03,0.03,16.86,21,25,105,0,1
 171,484389,7,9,1,Dovin,Oliver,Dovin,u,not included in squad.,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 172,110690,7,9,1,Wilson,Ben,Wilson,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-173,461102,7,9,2,Thomas,Bobby,Thomas,a,,100,766,9,0,0,0.60,0.78,1.38,13.06,15,0,115,102,2
+173,461102,7,9,2,Thomas,Bobby,Thomas,a,,100,766,9,0,0,0.60,0.79,1.39,12.88,15,0,115,102,2
 174,436761,7,9,2,Kitching,Liam,Kitching,u,Has joined Sheffield United on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-175,451284,7,9,2,van Ewijk,Milan,van Ewijk,a,,100,900,10,0,1,0.01,0.59,0.60,15.94,21,0,63,79,0
+175,451284,7,9,2,van Ewijk,Milan,van Ewijk,a,,100,900,10,0,1,0.01,0.59,0.60,15.76,21,0,63,79,0
 176,173878,7,9,2,Dasilva,Jay,Dasilva,a,,,894,10,1,1,0.53,0.76,1.29,15.13,19,0,82,46,1
 177,465390,7,9,2,Kesler-Hayden,Kaine,Kesler-Hayden,a,,100,3,0,0,0,0.00,0.00,0.00,0.07,1,0,2,1,0
 178,80178,7,9,2,Bidwell,Jake,Bidwell,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -211,44 +211,44 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 180,220583,7,9,2,Woolfenden,Luke,Woolfenden,i,Knee injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 181,577411,7,9,2,Brau,Miguel,Brau,u,Has joined Academico de Viseu on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 182,539142,7,9,2,Amenda,Aurèle,Amenda,i,Calf injury - Unknown return date,0,360,4,0,0,0.02,0.39,0.41,7.53,10,0,-3,24,0
-183,480457,7,9,3,Rudoni,Jack,Rudoni,a,,100,820,10,3,2,2.25,2.04,4.29,12.63,14,0,214,72,2
-184,168144,7,9,3,Grimes,Matt,Grimes,a,,,786,9,0,0,0.17,0.25,0.42,13.38,16,0,114,66,1
-185,501459,7,9,3,Sakamoto,Tatsuhiro,Sakamoto,a,,,488,5,2,0,0.78,0.11,0.89,7.37,11,0,101,44,0
+183,480457,7,9,3,Rudoni,Jack,Rudoni,a,,100,820,10,3,2,2.28,2.04,4.32,12.45,14,0,214,72,2
+184,168144,7,9,3,Grimes,Matt,Grimes,a,,,786,9,0,0,0.17,0.25,0.42,13.23,16,0,116,66,1
+185,501459,7,9,3,Sakamoto,Tatsuhiro,Sakamoto,a,,,488,5,2,0,0.70,0.11,0.81,7.19,11,0,98,44,0
 186,241293,7,9,3,Mason-Clark,Ephron,Mason-Clark,d,Knee injury - 75% chance of playing,75,326,5,0,0,0.51,0.37,0.88,4.92,5,0,34,18,1
 187,439668,7,9,3,Eccles,Josh,Eccles,i,Ankle injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-188,226965,7,9,3,Torp,Victor,Torp,a,,,297,3,0,1,0.32,0.34,0.66,6.30,8,0,69,30,0
+188,226965,7,9,3,Torp,Victor,Torp,a,,,297,3,0,1,0.28,0.33,0.61,6.15,8,0,69,30,0
 189,684268,7,9,3,Shepherd,George,Shepherd,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 190,469272,7,9,3,Tchaouna,Loum,Tchaouna,a,,,215,2,0,0,0.39,0.18,0.57,3.28,3,0,34,18,0
 191,492498,7,9,3,Borges Rodrigues,Raphael,Borges Rodrigues,u,Has joined Burton Albion on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 192,629397,7,9,3,Andrews,Kai,Andrews,u,Has joined Oxford United on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 193,176412,7,9,4,Wright,Haji,Wright,i,Lack of match fitness - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-194,230730,7,9,4,Thomas-Asante,Brandon,Thomas-Asante,a,,,515,5,0,3,1.00,0.08,1.07,8.69,10,0,114,50,2
+194,230730,7,9,4,Thomas-Asante,Brandon,Thomas-Asante,a,,,515,5,0,3,1.33,0.08,1.40,8.67,10,0,114,50,2
 195,218997,7,9,4,Simms,Ellis,Simms,a,,,116,1,1,0,0.40,0.01,0.41,2.99,3,0,42,3,0
 196,551262,7,9,4,Markelo,Jahnoah,Markelo,u,Has joined Shabab Al-Ahli Dubai permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 197,549653,7,9,4,Bassette,Norman,Bassette,u,Has joined KVC Westerlo on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-492,210156,7,9,4,Awoniyi,Taiwo,Awoniyi,d,Leg injury - 75% chance of playing,75,487,6,2,0,3.04,0.05,3.09,8.42,15,0,86,21,0
+492,210156,7,9,4,Awoniyi,Taiwo,Awoniyi,d,Leg injury - 75% chance of playing,75,487,6,2,0,2.90,0.05,2.95,8.14,15,0,86,21,0
 575,661888,7,9,3,Yirenkyi,Caleb,Yirenkyi,d,Unspecified injury - 75% chance of playing,75,647,8,0,0,0.15,0.20,0.35,10.18,12,0,79,65,3
-584,196100,7,9,3,Hamer,Gustavo,Hamer,a,,,71,0,0,0,0.00,0.26,0.26,1.22,2,0,23,6,0
-599,627221,7,9,4,Cherif,Sidiki,Cherif,a,,,298,3,1,1,0.39,0.02,0.41,4.77,6,0,70,8,1
+584,196100,7,9,3,Hamer,Gustavo,Hamer,a,,,71,0,0,0,0.00,0.26,0.26,1.20,2,0,23,6,0
+599,627221,7,9,4,Cherif,Sidiki,Cherif,a,,,298,3,1,1,0.39,0.02,0.41,4.89,6,0,70,8,1
 623,79602,7,9,1,Bentley,Dan,Bentley,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-655,242893,7,9,3,Gboho,Yann,Gboho,a,,,212,3,1,0,0.29,0.20,0.49,4.40,5,0,58,14,0
-656,566213,7,9,2,Mfuni,Stephen,Mfuni,a,,,397,4,1,0,0.36,0.07,0.43,6.59,7,0,72,44,1
-42,485337,8,31,3,Guessand,Evann,Guessand,a,,,65,0,0,0,0.15,0.18,0.33,0.78,2,0,10,4,0
-153,220362,8,31,2,Disasi,Axel,Disasi,a,,100,499,6,0,0,0.32,0.13,0.45,12.75,16,0,22,72,0
-198,172649,8,31,1,Henderson,Dean,Henderson,a,,100,540,6,0,0,0.00,0.00,0.00,14.55,16,28,81,0,0
+655,242893,7,9,3,Gboho,Yann,Gboho,a,,,212,3,1,0,0.29,0.16,0.45,4.25,5,0,61,14,0
+656,566213,7,9,2,Mfuni,Stephen,Mfuni,a,,,397,4,1,0,0.36,0.06,0.42,6.41,7,0,72,44,1
+42,485337,8,31,3,Guessand,Evann,Guessand,a,,,65,0,0,0,0.12,0.18,0.30,1.10,2,0,10,4,0
+153,220362,8,31,2,Disasi,Axel,Disasi,a,,100,499,6,0,0,0.32,0.13,0.45,12.85,16,0,20,72,0
+198,172649,8,31,1,Henderson,Dean,Henderson,a,,100,540,6,0,0,0.00,0.00,0.00,14.65,16,28,81,0,0
 199,121709,8,31,1,Benitez,Walter,Benítez,a,,,450,5,0,0,0.00,0.00,0.00,9.28,11,14,50,0,1
-202,427623,8,31,2,Richards,Chris,Richards,a,,,990,11,0,0,0.27,0.12,0.38,23.83,27,0,71,122,1
-203,651426,8,31,2,Canvot,Jaydee,Canvot,a,,,737,8,0,0,0.05,0.17,0.22,17.98,19,0,53,76,1
-204,244723,8,31,2,Mitchell,Tyrick,Mitchell,a,,,959,11,2,0,0.79,1.15,1.94,22.71,26,0,99,74,1
+202,427623,8,31,2,Richards,Chris,Richards,a,,,990,11,0,0,0.26,0.12,0.38,23.93,27,0,72,123,1
+203,651426,8,31,2,Canvot,Jaydee,Canvot,a,,,737,8,0,0,0.05,0.17,0.22,18.30,19,0,53,76,1
+204,244723,8,31,2,Mitchell,Tyrick,Mitchell,a,,,959,11,2,0,0.79,1.05,1.84,22.81,26,0,99,74,1
 205,218364,8,31,2,Sosa,Borna,Sosa,u,Has joined FC Cologne on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 206,515621,8,31,2,Chadi Riad,Chadi,Riad Dnanou,i,Knee injury - Unknown return date,0,72,1,0,0,0.00,0.01,0.01,0.98,2,0,7,7,0
 207,242313,8,31,2,Mingueza,Oscar,Mingueza,d,Thigh injury - 75% chance of playing,75,161,2,0,0,0.00,0.11,0.11,4.17,4,0,9,12,0
 208,232185,8,31,3,Sarr,Ismaïla,Sarr,i,Groin injury - Expected back 29 Nov,0,15,0,0,0,0.00,0.01,0.01,0.18,0,0,6,2,0
-210,496221,8,31,3,Wharton,Adam,Wharton,a,,100,973,11,0,1,0.43,1.46,1.89,22.70,26,0,161,87,1
-211,488024,8,31,3,Yeremy,Yéremy,Pino Santos,s,Suspended until 2 Dec,0,762,10,2,3,2.22,1.49,3.71,17.46,18,0,183,60,1
+210,496221,8,31,3,Wharton,Adam,Wharton,a,,100,973,11,0,1,0.43,1.46,1.89,22.80,26,0,163,88,1
+211,488024,8,31,3,Yeremy,Yéremy,Pino Santos,s,Suspended until 2 Dec,0,762,10,2,3,2.11,1.50,3.61,17.24,18,0,184,61,1
 212,108413,8,31,3,Hughes,Will,Hughes,a,,,40,0,0,0,0.00,0.04,0.04,2.64,2,0,15,7,0
-213,152551,8,31,3,Lerma,Jefferson,Lerma Solís,a,,,268,2,1,0,1.02,0.04,1.06,8.77,7,0,55,46,0
-214,209400,8,31,3,Kamada,Daichi,Kamada,a,,,967,11,1,3,1.41,0.73,2.14,21.58,25,0,194,84,1
+213,152551,8,31,3,Lerma,Jefferson,Lerma Solís,a,,,268,2,1,0,1.02,0.04,1.06,9.09,7,0,55,46,0
+214,209400,8,31,3,Kamada,Daichi,Kamada,a,,,967,11,1,3,1.39,0.75,2.14,21.68,25,0,194,84,1
 215,489706,8,31,3,Devenny,Justin,Devenny,u,Has joined Stoke City permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 216,606921,8,31,3,Esse,Romain,Esse,u,Has joined Millwall on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 217,536694,8,31,3,M.França,Matheus,França de Oliveira,u,Has joined Alverca on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -256,18 +256,18 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 219,450542,8,31,3,J.Rak-Sakyi,Jesurun,Rak-Sakyi,u,has joined  Kasimpasa on loan for the rest of the seaon.,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 220,590014,8,31,2,Cardines,Rio,Cardines,u,Has joined Bristol City on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 221,672492,8,31,3,Drakes-Thomas,Joél,Drakes-Thomas,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-222,247412,8,31,4,Strand Larsen,Jørgen,Strand Larsen,a,,100,589,7,2,2,2.36,0.53,2.89,13.89,14,0,143,27,1
+222,247412,8,31,4,Strand Larsen,Jørgen,Strand Larsen,a,,100,589,7,2,2,2.34,0.53,2.87,13.67,14,0,143,27,1
 223,231747,8,31,4,Mateta,Jean-Philippe,Mateta,s,Suspended until 2 Dec,0,164,3,0,0,1.96,0.04,2.00,2.87,7,0,-2,12,0
-224,205533,8,31,4,Nketiah,Eddie,Nketiah,a,,100,298,3,1,1,2.15,0.63,2.78,8.81,11,0,60,18,0
+224,205533,8,31,4,Nketiah,Eddie,Nketiah,a,,100,298,3,1,1,2.15,0.63,2.78,9.13,11,0,60,18,0
 225,660392,8,31,4,Uche,Christantus,Uche,u,has returned to Getafe CF,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-241,433154,8,31,3,McNeil,Dwight,McNeil,a,,,359,4,0,0,0.30,0.39,0.69,8.38,13,0,57,36,0
+241,433154,8,31,3,McNeil,Dwight,McNeil,a,,,359,4,0,0,0.30,0.38,0.68,8.48,13,0,61,36,0
 555,169593,8,31,1,Matthews,Remi,Matthews,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 577,223723,8,31,2,Tomiyasu,Takehiro,Tomiyasu,i,Calf injury - Expected back 29 Nov,0,189,2,0,0,0.00,0.03,0.03,3.98,5,0,10,17,0
-588,570794,8,31,2,Khalaili,Anan,Khalaili,a,,100,754,8,1,0,1.27,0.92,2.19,18.49,20,0,65,78,1
+588,570794,8,31,2,Khalaili,Anan,Khalaili,a,,100,754,8,1,0,1.28,1.02,2.30,18.27,20,0,65,79,1
 595,559152,8,31,3,Gozo,Zavier,Gozo,a,,,28,0,0,0,0.00,0.00,0.00,0.68,2,0,6,1,0
 633,605972,8,31,2,Ahanor,Honest,Ahanor,a,,,160,2,0,0,0.00,0.01,0.01,3.17,7,0,10,19,0
 643,172850,8,31,2,Chilwell,Ben,Chilwell,a,,100,29,0,1,0,0.27,0.01,0.28,1.12,1,0,21,1,0
-644,450063,8,31,3,Timber,Quinten,Timber,a,,100,519,7,0,1,0.49,0.18,0.67,12.84,13,0,109,60,1
+644,450063,8,31,3,Timber,Quinten,Timber,a,,100,519,7,0,1,0.49,0.18,0.67,12.62,13,0,109,60,1
 647,533646,8,31,3,Osorio,Darío,Osorio,a,,,72,0,0,1,0.24,0.31,0.55,1.91,1,0,37,12,0
 21,128295,9,11,3,Nørgaard,Christian,Nørgaard,a,,100,5,0,0,0,0.00,0.00,0.00,0.35,1,0,-1,2,0
 209,242898,9,11,3,Johnson,Brennan,Johnson,a,,,406,5,0,0,1.07,0.39,1.46,7.83,5,0,46,33,2
@@ -366,24 +366,24 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 638,496181,11,88,2,Norton-Cuffy,Brooke,Norton-Cuffy,a,,100,168,1,0,0,0.09,0.01,0.10,2.45,2,0,10,10,0
 642,243951,11,88,3,Thomas,Sorba,Thomas,a,,,271,3,0,1,0.22,0.64,0.86,4.51,6,0,56,24,0
 645,647839,11,88,3,Mouzakitis,Christos,Mouzakitis,a,,,15,0,0,0,0.00,0.01,0.01,0.49,0,0,4,2,0
-259,219924,12,40,2,Diop,Issa,Diop,a,,,990,11,0,0,0.10,0.18,0.28,22.13,22,0,80,94,0
-267,212314,12,40,3,Lukić,Saša,Lukić,a,,100,580,7,0,1,0.02,0.47,0.49,11.87,13,0,107,66,0
-300,108813,12,40,1,Walton,Christian,Walton,a,,,630,7,0,0,0.00,0.03,0.03,15.39,12,23,76,0,0
+259,219924,12,40,2,Diop,Issa,Diop,a,,,990,11,0,0,0.10,0.18,0.28,22.09,22,0,80,94,0
+267,212314,12,40,3,Lukić,Saša,Lukić,a,,100,580,7,0,1,0.02,0.47,0.49,11.83,13,0,107,66,0
+300,108813,12,40,1,Walton,Christian,Walton,a,,,630,7,0,0,0.00,0.03,0.03,15.35,12,23,77,0,0
 301,112520,12,40,1,Palmer,Alex,Palmer,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 302,50093,12,40,1,Button,David,Button,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 303,183015,12,40,2,Kipré,Cédric,Kipré,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-304,216616,12,40,2,O'Shea,Dara,O'Shea,a,,,990,11,1,0,0.30,0.34,0.64,22.13,22,0,75,106,0
-305,455084,12,40,2,Davis,Leif,Davis,d,Unspecified injury - 75% chance of playing,75,982,11,2,2,1.64,0.72,2.36,22.13,22,0,89,62,0
+304,216616,12,40,2,O'Shea,Dara,O'Shea,a,,,990,11,1,0,0.30,0.35,0.65,22.09,22,0,75,106,0
+305,455084,12,40,2,Davis,Leif,Davis,d,Unspecified injury - 75% chance of playing,75,982,11,2,2,1.64,0.72,2.36,22.09,22,0,89,62,0
 306,449429,12,40,2,Greaves,Jacob,Greaves,a,,,454,5,0,0,0.02,0.08,0.10,9.98,13,0,9,37,0
 307,222018,12,40,2,Johnson,Ben,Johnson,u,Has joined Stoke City on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-308,176420,12,40,2,Furlong,Darnell,Furlong,a,,,107,1,0,0,0.00,0.00,0.00,3.55,3,0,-1,6,0
+308,176420,12,40,2,Furlong,Darnell,Furlong,a,,,107,1,0,0,0.00,0.00,0.00,3.51,3,0,-1,6,0
 309,501390,12,40,3,Núñez,Marcelino,Núñez,a,,,140,2,0,0,0.03,0.05,0.08,3.48,4,0,32,21,0
 310,241117,12,40,3,Matusiwa,Azor,Matusiwa,a,,100,44,0,0,1,0.00,0.00,0.00,1.65,0,0,22,11,0
 311,149929,12,40,3,Burns,Wes,Burns,u,Has joined Leicester City permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 312,231899,12,40,3,Taylor,Jack,Taylor,a,,100,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-313,443261,12,40,3,Clarke,Jack,Clarke,a,,,319,2,2,1,1.26,0.45,1.71,4.23,2,0,102,28,0
+313,443261,12,40,3,Clarke,Jack,Clarke,a,,,319,2,2,1,1.26,0.45,1.71,4.22,2,0,102,28,0
 314,229164,12,40,3,Ogbene,Chiedozie,Ogbene,u,Has joined Lincoln City on loan until January,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-315,531442,12,40,3,Fatawu,Abdul,Fatawu,a,,100,571,7,0,2,0.40,1.49,1.89,12.03,13,0,118,45,0
+315,531442,12,40,3,Fatawu,Abdul,Fatawu,a,,100,571,7,0,2,0.41,1.44,1.85,12.02,13,0,118,45,0
 316,543968,12,40,4,Emersonn,Emersonn,Correia da Silva,a,,100,668,10,2,1,2.71,0.19,2.90,11.48,15,0,133,23,0
 317,222625,12,40,4,Hirst,George,Hirst,u,Has joined Stoke City permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 318,481624,12,40,3,Philogene,Jaden,Philogene,a,,100,295,4,0,0,0.25,0.06,0.30,6.12,7,0,49,24,0
@@ -394,14 +394,14 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 323,461587,12,40,3,McAteer,Kasey,McAteer,a,,,42,0,0,0,0.05,0.00,0.05,0.21,0,0,12,5,0
 324,232457,12,40,3,Mehmeti,Anis,Mehmeti,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 554,546600,12,40,1,Van Oevelen,Kayne,van Oevelen,u,Has joined Valencia on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-562,442967,12,40,3,Maeda,Daizen,Maeda,a,,,565,7,1,0,1.20,0.05,1.25,14.76,16,0,90,36,0
+562,442967,12,40,3,Maeda,Daizen,Maeda,a,,,565,7,1,0,1.20,0.05,1.25,14.74,16,0,90,36,0
 564,240514,12,40,1,Scherpen,Kjell,Scherpen,a,,,360,4,0,0,0.00,0.01,0.01,6.74,10,15,40,0,0
-571,216055,12,40,3,Florentino,Florentino Ibrain,Morris Luís,a,,100,433,5,1,0,0.25,0.21,0.46,9.25,9,0,108,56,0
-591,474120,12,40,3,Enciso,Julio,Enciso,a,,100,915,11,2,2,2.18,2.29,4.47,19.89,22,0,212,64,0
-592,572584,12,40,2,Ouattara,Abdoul,Ouattara,a,,,636,7,1,3,0.25,0.50,0.75,16.10,13,0,119,44,0
+571,216055,12,40,3,Florentino,Florentino Ibrain,Morris Luís,a,,100,433,5,1,0,0.25,0.21,0.46,9.24,9,0,108,56,0
+591,474120,12,40,3,Enciso,Julio,Enciso,a,,100,915,11,2,2,2.22,2.29,4.51,19.85,22,0,212,64,0
+592,572584,12,40,2,Ouattara,Abdoul,Ouattara,a,,,636,7,1,3,0.29,0.50,0.79,16.08,13,0,119,44,0
 602,524180,12,40,3,Humphreys,Cameron,Humphreys,u,Has joined Huddersfield Town on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-619,218543,12,40,3,Palacios,Exequiel,Palacios,a,,,717,8,0,0,0.02,0.36,0.38,16.67,17,0,149,126,0
-640,431639,12,40,4,Flemming,Zian,Flemming,a,,,243,1,2,0,1.82,0.04,1.86,6.60,3,0,72,18,0
+619,218543,12,40,3,Palacios,Exequiel,Palacios,a,,,717,8,0,0,0.02,0.36,0.38,16.65,17,0,150,126,0
+640,431639,12,40,4,Flemming,Zian,Flemming,a,,,243,1,2,0,1.82,0.04,1.86,6.56,3,0,72,18,0
 260,153682,13,2,3,Wilson,Harry,Wilson,a,,100,326,3,0,1,0.31,0.31,0.62,6.41,2,0,66,23,2
 326,201595,13,2,1,Perri,Lucas Estella,Perri,u,Has joined Torino on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 327,434752,13,2,2,Bijol,Jaka,Bijol,a,,,258,3,0,0,0.13,0.00,0.13,4.40,2,0,58,39,2
@@ -570,105 +570,105 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 664,601767,17,4,4,Salia,Vakhtang,Salia,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 665,655585,17,4,3,Mills,Michael,Mills,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 666,671875,17,4,3,Thompson,Kyran,Thompson,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-167,463034,18,17,4,Delap,Liam,Delap,a,,,768,9,3,0,3.08,0.75,3.83,11.14,12,0,129,30,1
-201,247348,18,17,2,Muñoz,Daniel,Muñoz Mejía,a,,,717,8,0,1,1.10,0.74,1.84,10.99,13,0,70,51,0
-467,85633,18,17,1,Sels,Matz,Sels,a,,,990,11,0,0,0.00,0.04,0.04,13.87,15,24,122,0,1
+167,463034,18,17,4,Delap,Liam,Delap,a,,,768,9,3,0,3.00,0.75,3.75,11.16,12,0,129,31,1
+201,247348,18,17,2,Muñoz,Daniel,Muñoz Mejía,a,,,717,8,0,1,1.10,0.73,1.83,11.11,13,0,70,51,0
+467,85633,18,17,1,Sels,Matz,Sels,a,,,990,11,0,0,0.00,0.06,0.06,13.89,15,24,122,0,1
 468,221389,18,17,1,John,John Victor,Maciel Furtado,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-469,215136,18,17,2,N.Williams,Neco,Williams,a,,100,964,11,1,1,1.00,1.17,2.17,13.36,15,0,133,63,1
+469,215136,18,17,2,N.Williams,Neco,Williams,a,,100,964,11,1,1,1.02,1.17,2.19,13.47,15,0,131,63,1
 470,485047,18,17,2,Morato,Felipe,Rodrigues da Silva,u,Has joined West Ham on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-471,227444,18,17,2,Milenković,Nikola,Milenković,a,,100,630,7,0,0,0.21,0.13,0.34,8.83,9,0,52,63,1
-472,575476,18,17,2,Murillo,Murillo,Costa dos Santos,a,,100,989,11,0,1,1.27,0.67,1.94,13.87,15,0,121,108,1
-473,159506,18,17,2,Aina,Ola,Aina,a,,,441,6,0,0,0.06,0.54,0.60,6.66,7,0,57,34,1
-474,575458,18,17,2,Jair Cunha,Jair,Paula da Cunha Filho,a,,100,804,9,1,0,0.65,0.12,0.77,10.64,11,0,107,64,1
+471,227444,18,17,2,Milenković,Nikola,Milenković,a,,100,630,7,0,0,0.21,0.14,0.35,8.85,9,0,50,63,1
+472,575476,18,17,2,Murillo,Murillo,Costa dos Santos,a,,100,989,11,0,1,1.28,0.67,1.95,13.89,15,0,121,108,1
+473,159506,18,17,2,Aina,Ola,Aina,a,,,441,6,0,0,0.06,0.54,0.60,6.56,7,0,57,34,1
+474,575458,18,17,2,Jair Cunha,Jair,Paula da Cunha Filho,a,,100,804,9,1,0,0.65,0.12,0.77,10.66,11,0,107,64,1
 475,500151,18,17,2,Savona,Nicolò,Savona,i,Knee injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 476,204822,18,17,2,O.Richards,Omar,Richards,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 477,549067,18,17,2,Abbott,Zach,Abbott,u,Has joined Southampton on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-478,470315,18,17,2,Netz,Luca,Netz,a,,,76,0,0,0,0.00,0.03,0.03,0.75,1,0,13,3,0
+478,470315,18,17,2,Netz,Luca,Netz,a,,,76,0,0,0,0.00,0.03,0.03,0.66,1,0,13,3,0
 479,538638,18,17,2,Bindon,Tyler,Bindon,u,Has joined Charlton Athletic on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-480,222531,18,17,3,Gibbs-White,Morgan,Gibbs-White,a,,100,900,10,1,3,2.69,2.63,5.32,12.73,14,0,204,50,1
+480,222531,18,17,3,Gibbs-White,Morgan,Gibbs-White,a,,100,900,10,1,3,2.77,2.61,5.38,12.75,14,0,205,50,1
 482,209046,18,17,3,Hudson-Odoi,Callum,Hudson-Odoi,i,Unspecified injury - Unknown return date,0,45,0,0,0,0.11,0.08,0.19,0.31,0,0,15,4,0
-483,456512,18,17,3,Ndoye,Dan,Ndoye,a,,100,661,10,2,0,2.34,1.36,3.70,9.63,10,0,85,31,2
+483,456512,18,17,3,Ndoye,Dan,Ndoye,a,,100,661,10,2,0,2.36,1.36,3.72,9.74,10,0,85,31,2
 484,503301,18,17,3,Hutchinson,Omari,Hutchinson,u,Has joined AC Milan on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 485,476887,18,17,3,Bakwa,Dilane,Bakwa,u,Has joined Lille on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-486,432714,18,17,3,McAtee,James,McAtee,a,,,905,11,0,0,1.30,1.77,3.07,13.08,14,0,173,118,2
+486,432714,18,17,3,McAtee,James,McAtee,a,,,905,11,0,0,1.28,1.77,3.05,13.19,14,0,172,117,2
 487,250199,18,17,3,Dominguez,Nicolás,Domínguez,i,Muscular injury - Expected back 30 Dec,0,74,1,0,0,0.00,0.01,0.01,0.95,0,0,11,7,1
 488,210462,18,17,3,I.Sangaré,Ibrahim,Sangaré,a,,100,156,1,0,0,0.09,0.04,0.13,1.06,2,0,25,21,0
-489,204968,18,17,3,Yates,Ryan,Yates,a,,100,168,2,0,0,0.30,0.03,0.33,4.05,4,0,23,22,0
-490,60689,18,17,4,Wood,Chris,Wood,a,,,129,0,0,0,1.15,0.01,1.16,1.56,2,0,25,2,0
-491,482973,18,17,4,Igor Jesus,Igor Jesus,Maciel da Cruz,a,,100,305,2,1,0,1.98,0.11,2.09,3.50,3,0,59,22,0
+489,204968,18,17,3,Yates,Ryan,Yates,a,,100,168,2,0,0,0.30,0.02,0.32,4.16,4,0,23,23,0
+490,60689,18,17,4,Wood,Chris,Wood,a,,,129,0,0,0,1.15,0.01,1.16,1.47,2,0,25,2,0
+491,482973,18,17,4,Igor Jesus,Igor Jesus,Maciel da Cruz,a,,100,305,2,1,0,1.87,0.10,1.97,3.40,3,0,57,22,0
 493,465680,18,17,4,Kalimuendo,Arnaud,Kalimuendo,a,,,50,0,0,0,0.03,0.00,0.03,0.58,2,0,14,4,0
-558,204561,18,17,3,Schlager,Xaver,Schlager,a,,100,801,9,0,1,0.47,0.64,1.11,10.97,12,0,149,110,1
+558,204561,18,17,3,Schlager,Xaver,Schlager,a,,100,801,9,0,1,0.47,0.64,1.11,10.87,12,0,149,110,1
 581,568420,18,17,2,Diomande,Ousmane,Diomande,a,,,343,4,0,0,0.23,0.02,0.25,5.00,6,0,30,33,0
 590,428971,18,17,1,Benda,Steven,Benda,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-112,469142,19,6,2,Van Hecke,Jan Paul,van Hecke,a,,100,990,11,2,0,1.82,0.77,2.59,12.30,11,0,207,88,5
+112,469142,19,6,2,Van Hecke,Jan Paul,van Hecke,a,,100,990,11,2,0,1.77,0.77,2.54,12.39,11,0,207,88,5
 147,109646,19,6,2,Tosin,Tosin,Adarabioyo,i,Calf injury - Expected back 29 Nov,0,75,1,0,0,0.00,0.02,0.02,0.55,1,0,15,9,0
-401,438234,19,6,4,Marmoush,Omar,Marmoush,a,,100,679,8,1,0,1.08,0.33,1.41,6.84,7,0,116,37,5
-403,510281,19,6,3,Sávio,Sávio,Moreira de Oliveira,d,Unspecified injury - 75% chance of playing,75,355,4,0,0,0.59,0.95,1.54,3.68,4,0,87,19,2
+401,438234,19,6,4,Marmoush,Omar,Marmoush,a,,100,679,8,1,0,1.08,0.33,1.41,6.85,7,0,116,37,5
+403,510281,19,6,3,Sávio,Sávio,Moreira de Oliveira,d,Unspecified injury - 75% chance of playing,75,355,4,0,0,0.59,0.95,1.54,3.69,4,0,87,19,2
 455,432422,19,6,3,Tonali,Sandro,Tonali,a,,100,877,10,0,1,0.40,1.35,1.75,11.86,11,0,175,90,4
 494,184254,19,6,1,Vicario,Guglielmo,Vicario,u,Has joined Juventus on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 495,214572,19,6,1,Austin,Brandon,Austin,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-496,485055,19,6,1,Kinsky,Antonín,Kinský,a,,,990,11,0,0,0.00,0.00,0.00,12.30,11,25,196,0,5
+496,485055,19,6,1,Kinsky,Antonín,Kinský,a,,,990,11,0,0,0.00,0.00,0.00,12.39,11,25,196,0,5
 497,67089,19,6,1,Dubravka,Martin,Dubravka,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-498,221466,19,6,2,Senesi,Marcos,Senesi Barón,a,,,268,3,0,0,0.00,0.12,0.12,4.82,4,0,56,32,1
-499,441164,19,6,2,Pedro Porro,Pedro,Porro Sauceda,a,,100,422,5,0,1,0.56,0.60,1.16,3.45,2,0,112,16,3
+498,221466,19,6,2,Senesi,Marcos,Senesi Barón,a,,,268,3,0,0,0.00,0.12,0.12,4.91,4,0,56,32,1
+499,441164,19,6,2,Pedro Porro,Pedro,Porro Sauceda,a,,100,422,5,0,1,0.56,0.60,1.16,3.54,2,0,112,16,3
 500,221632,19,6,2,Romero,Cristian,Romero,u,Has joined Atletico Madrid permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-502,122798,19,6,2,Robertson,Andrew,Robertson,a,,100,675,8,0,2,0.27,1.45,1.72,10.08,9,0,151,32,3
+502,122798,19,6,2,Robertson,Andrew,Robertson,a,,100,675,8,0,2,0.27,1.45,1.72,10.09,9,0,151,32,3
 503,491279,19,6,2,Van de Ven,Micky,van de Ven,a,,100,736,8,0,0,0.67,0.18,0.85,7.70,7,0,142,49,4
 505,232859,19,6,2,Spence,Djed,Spence,u,Has joined Internazionale permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-506,487053,19,6,2,Udogie,Destiny,Udogie,a,,100,250,3,0,0,0.00,0.74,0.74,1.88,2,0,55,16,2
+506,487053,19,6,2,Udogie,Destiny,Udogie,a,,100,250,3,0,0,0.00,0.74,0.74,1.96,2,0,55,16,2
 507,548308,19,6,2,Phillips,Ashley,Phillips,u,Has joined Middlesbrough permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 508,115556,19,6,2,Davies,Ben,Davies,a,,,22,0,1,0,0.04,0.00,0.04,0.25,0,0,19,2,0
 509,640419,19,6,2,Byfield,Jun'ai,Byfield,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 510,499716,19,6,2,Rowswell,James,Rowswell,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 511,616221,19,6,2,Souza,João Victor,de Souza Menezes,u,Has joined FC Porto on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-512,460842,19,6,3,Kudus,Mohammed,Kudus,a,,100,624,6,0,3,1.34,1.14,2.48,5.22,5,0,164,60,4
+512,460842,19,6,3,Kudus,Mohammed,Kudus,a,,100,624,6,0,3,1.35,1.14,2.49,5.31,5,0,164,60,4
 513,493362,19,6,3,Xavi,Xavi,Simons,i,Knee injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 514,511499,19,6,3,Tel,Mathys,Tel,i,Ankle injury - Expected back 6 Dec,0,477,6,1,0,0.66,0.53,1.19,6.50,4,0,106,31,3
-515,172780,19,6,3,Maddison,James,Maddison,a,,100,256,3,1,0,0.46,0.30,0.76,2.48,3,0,85,33,1
+515,172780,19,6,3,Maddison,James,Maddison,a,,100,256,3,1,0,0.44,0.19,0.63,2.56,3,0,85,33,1
 516,202993,19,6,3,Bentancur,Rodrigo,Bentancur,a,,100,406,4,0,0,0.36,0.16,0.52,6.48,8,0,77,71,2
 517,550839,19,6,3,Odobert,Wilson,Odobert,i,Knee injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 518,482442,19,6,3,P.M.Sarr,Pape Matar,Sarr,u,Has joined Juventus on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-519,232787,19,6,3,Gallagher,Conor,Gallagher,a,,,406,4,1,0,1.43,0.23,1.66,4.65,4,0,92,52,2
-520,570526,19,6,3,Bergvall,Lucas,Bergvall,a,,100,169,2,0,0,0.12,0.30,0.42,2.56,2,0,23,23,1
+519,232787,19,6,3,Gallagher,Conor,Gallagher,a,,,406,4,1,0,1.43,0.23,1.66,4.74,4,0,94,52,2
+520,570526,19,6,3,Bergvall,Lucas,Bergvall,a,,100,169,2,0,0,0.12,0.30,0.42,2.57,2,0,23,23,1
 521,445044,19,6,3,Kulusevski,Dejan,Kulusevski,a,,100,42,0,0,0,0.05,0.03,0.08,0.96,1,0,24,8,0
 522,547701,19,6,3,Gray,Archie,Gray,a,,,713,8,1,0,0.52,0.20,0.72,10.15,10,0,138,63,2
 523,499721,19,6,3,Moore,Mikey,Moore,u,Has joined FC Köln on loan for the rest of the season,0,89,1,0,0,0.40,0.02,0.42,3.26,4,0,11,3,0
 524,499726,19,6,3,Olusesi,Callum,Olusesi,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-525,551226,19,6,3,Fernandes,Mateus,Fernandes,a,,,603,7,0,1,0.35,0.99,1.34,7.11,4,0,143,78,5
-526,154566,19,6,4,Solanke,Dominic,Solanke-Mitchell,a,,,550,6,2,1,3.31,0.16,3.47,6.43,4,0,130,39,3
+525,551226,19,6,3,Fernandes,Mateus,Fernandes,a,,,603,7,0,1,0.35,0.99,1.34,7.20,4,0,143,78,5
+526,154566,19,6,4,Solanke,Dominic,Solanke-Mitchell,a,,,550,6,2,1,3.23,0.16,3.39,6.51,4,0,130,39,3
 527,212319,19,6,4,Richarlison,Richarlison,de Andrade,u,not included in squad.,0,67,1,0,0,0.00,0.00,0.00,3.02,3,0,6,1,0
 528,490145,19,6,4,Scarlett,Dane,Scarlett,u,Has joined Leyton Orient permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 578,465920,19,6,3,Mudryk,Mykhailo,Mudryk,i,Ankle injury - Unknown return date,0,16,0,0,0,0.00,0.00,0.00,0.16,0,0,3,0,0
-601,611917,19,6,3,Williams-Barnett,Luca,Williams-Barnett,a,,,72,1,1,1,0.74,0.44,1.18,0.26,0,0,57,5,1
+601,611917,19,6,3,Williams-Barnett,Luca,Williams-Barnett,a,,,72,1,1,1,0.84,0.44,1.28,0.34,0,0,57,5,1
 671,536108,19,6,1,Gunter,Luca,Gunter,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 501,135720,20,56,2,Danso,Kevin,Danso,n,Ineligible to face parent club - Expected back 2 Dec,0,376,5,0,0,0.30,0.20,0.50,8.20,12,0,-9,26,0
-529,498016,20,56,1,Roefs,Robin,Roefs,a,,,990,11,0,0,0.00,0.04,0.04,17.39,17,28,164,0,4
+529,498016,20,56,1,Roefs,Robin,Roefs,a,,,990,11,0,0,0.00,0.04,0.04,17.44,17,28,164,0,4
 530,232571,20,56,1,Patterson,Anthony,Patterson,u,Has joined Wrexham permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 531,515046,20,56,1,Ellborg,Melker,Ellborg,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 532,223827,20,56,2,Ballard,Daniel,Ballard,i,Hamstring injury - Unknown return date,0,450,5,0,0,0.31,0.16,0.47,8.66,10,0,31,49,1
-533,200834,20,56,2,Mukiele,Nordi,Mukiele,a,,100,771,9,0,0,0.83,0.36,1.19,14.27,12,0,120,103,3
-534,487676,20,56,2,Hume,Trai,Hume,a,,,730,8,0,0,0.56,0.36,0.92,13.06,9,0,109,58,4
+533,200834,20,56,2,Mukiele,Nordi,Mukiele,a,,100,771,9,0,0,0.83,0.36,1.19,14.32,12,0,120,103,3
+534,487676,20,56,2,Hume,Trai,Hume,a,,,730,8,0,0,0.57,0.36,0.93,13.11,9,0,109,58,4
 535,201895,20,56,2,Alderete,Omar,Alderete,a,,100,209,2,0,0,0.02,0.02,0.04,4.56,6,0,-19,23,0
-536,434399,20,56,2,Reinildo,Reinildo,Mandava,a,,100,882,10,0,0,0.03,0.38,0.41,13.32,11,0,116,69,4
+536,434399,20,56,2,Reinildo,Reinildo,Mandava,a,,100,882,10,0,0,0.03,0.38,0.41,13.37,11,0,116,70,4
 537,519634,20,56,2,Seelt,Jenson,Seelt,u,Has joined Swansea City on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 538,477547,20,56,2,Hjelde,Leo Fuhr,Hjelde,u,Has joined KV Mechelen on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-539,167512,20,56,2,O'Nien,Luke,O'Nien,a,,,457,5,0,1,0.33,0.14,0.47,5.87,4,0,87,41,3
+539,167512,20,56,2,O'Nien,Luke,O'Nien,a,,,457,5,0,1,0.33,0.14,0.47,5.92,4,0,86,41,3
 540,105717,20,56,2,Masuaku,Arthur,Masuaku,u,Has joined Konyaspor permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-541,93605,20,56,2,Meunier,Thomas,Meunier,a,,100,624,8,0,1,0.49,0.66,1.15,8.28,8,0,88,31,3
-542,484420,20,56,3,E.Le Fée,Enzo,Le Fée,a,,,953,11,3,1,3.94,1.94,5.88,16.56,15,0,218,68,4
+541,93605,20,56,2,Meunier,Thomas,Meunier,a,,100,624,8,0,1,0.49,0.66,1.15,8.33,8,0,89,32,3
+542,484420,20,56,3,E.Le Fée,Enzo,Le Fée,a,,,953,11,3,1,3.92,1.94,5.86,16.61,15,0,218,68,4
 543,547027,20,56,3,Diarra,Habib,Diarra,i,Muscular injury - Unknown return date,0,70,0,0,1,0.03,0.16,0.19,1.60,1,0,25,3,0
 544,84450,20,56,3,Xhaka,Granit,Xhaka,i,Calf injury - Unknown return date,0,813,10,0,1,0.15,1.82,1.97,15.75,17,0,185,97,2
-545,577669,20,56,3,Sadiki,Noah,Sadiki,a,,,934,11,0,0,0.44,0.44,0.88,14.96,16,0,163,76,4
+545,577669,20,56,3,Sadiki,Noah,Sadiki,a,,,934,11,0,0,0.44,0.44,0.88,15.01,16,0,162,74,4
 546,535818,20,56,3,Adingra,Simon,Adingra,u,Has joined Ajax on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 547,461199,20,56,3,Mundle,Romaine,Mundle,i,Knee injury - Unknown return date,0,1,0,0,0,0.17,0.00,0.17,0.09,0,0,2,1,0
 548,554197,20,56,3,Rigg,Chris,Rigg,a,,,229,3,0,0,0.24,0.04,0.28,5.32,6,0,41,21,1
-549,549912,20,56,3,Talbi,Chemsdine,Talbi,a,,,252,2,0,0,0.35,0.38,0.73,2.36,1,0,25,15,2
+549,549912,20,56,3,Talbi,Chemsdine,Talbi,a,,,252,2,0,0,0.35,0.38,0.73,2.41,1,0,26,15,2
 550,699989,20,56,3,Jocelin.T,Djiamgone Jocelin Ta,Bi,a,,,17,0,0,0,0.00,0.03,0.03,0.47,1,0,4,0,0
-551,536661,20,56,3,N.Angulo,Nilson,Angulo,a,,,534,8,1,1,0.79,0.28,1.06,6.59,11,0,97,38,2
+551,536661,20,56,3,N.Angulo,Nilson,Angulo,a,,,534,8,1,1,0.79,0.28,1.06,6.60,11,0,97,38,2
 552,441264,20,56,4,Brobbey,Brian,Brobbey,i,Muscular injury - Unknown return date,0,619,8,3,1,4.21,0.13,4.34,9.58,12,0,130,21,3
-553,437505,20,56,4,Isidor,Wilson,Isidor,a,,100,339,2,1,1,2.27,0.05,2.32,6.45,5,0,64,16,1
+553,437505,20,56,4,Isidor,Wilson,Isidor,a,,100,339,2,1,1,2.27,0.05,2.32,6.49,5,0,67,17,1
 612,638411,20,56,2,Methalie,Dayann,Méthalie,a,,100,107,1,0,0,0.03,0.01,0.04,3.29,6,0,-7,5,0
-613,696104,20,56,3,Ahoka,Jules,Ahoka,a,,,201,1,0,0,0.01,0.03,0.04,2.24,0,0,34,31,2
+613,696104,20,56,3,Ahoka,Jules,Ahoka,a,,,201,1,0,0,0.01,0.03,0.04,2.29,0,0,34,31,2
 646,549940,20,56,3,Fofana,Malick,Fofana,a,,,131,0,0,0,0.42,0.03,0.45,4.44,4,0,26,11,0
 651,661313,20,56,4,J.Angulo,Juan,Angulo,a,,,9,0,0,0,0.00,0.00,0.00,0.15,1,0,3,0,0
 668,604211,20,56,3,Tutierov,Tymur,Tutierov,a,,,83,1,0,0,0.02,0.00,0.02,3.61,2,0,6,4,0
