@@ -6581,6 +6581,7 @@ GW,assists,bonus,bps,clean_sheets,defensive_contribution,element,expected_assist
 11,0,0,0,0,0,18,0.00,0.00,0.00,0.00,109,0,0,2026-11-21T17:30:00Z,0,Gabriel Martinelli Silva,MID,0,0,0,Arsenal,2,2,False,0
 11,0,0,0,0,0,19,0.00,0.00,0.00,0.00,109,0,0,2026-11-21T17:30:00Z,0,Martín Zubimendi Ibáñez,MID,0,0,0,Arsenal,2,2,False,0
 11,0,0,0,0,0,20,0.00,0.00,0.00,0.00,109,0,0,2026-11-21T17:30:00Z,0,Max Dowman,MID,0,0,0,Arsenal,2,2,False,0
+11,0,0,3,0,0,21,0.00,0.00,0.00,1.02,103,1,0,2026-11-23T20:00:00Z,5,Christian Nørgaard,MID,0,0,0,Everton,0,4,False,0
 11,0,0,0,0,0,22,0.00,0.00,0.00,0.00,109,0,0,2026-11-21T17:30:00Z,0,Ethan Nwaneri,MID,0,0,0,Arsenal,2,2,False,0
 11,0,0,0,0,0,23,0.00,0.00,0.00,0.00,109,0,0,2026-11-21T17:30:00Z,0,Fábio Ferreira Vieira,MID,0,0,0,Arsenal,2,2,False,0
 11,0,0,0,0,0,24,0.00,0.00,0.00,0.00,109,0,0,2026-11-21T17:30:00Z,0,Reiss Nelson,MID,0,0,0,Arsenal,2,2,False,0
@@ -6641,9 +6642,33 @@ GW,assists,bonus,bps,clean_sheets,defensive_contribution,element,expected_assist
 11,0,0,32,1,2,79,0.02,1.14,1.12,1.99,102,0,1,2026-11-21T15:00:00Z,90,Francisco Evanilson de Lima Barbosa,FWD,0,0,1,Bournemouth,0,2,True,0
 11,0,0,0,0,0,80,0.00,0.00,0.00,0.00,102,0,0,2026-11-21T15:00:00Z,0,Enes Ünal,FWD,0,0,0,Bournemouth,0,2,True,0
 11,0,0,0,0,0,81,0.00,0.00,0.00,0.00,102,0,0,2026-11-21T15:00:00Z,0,Álvaro Rodríguez,FWD,0,0,0,Bournemouth,0,2,True,0
+11,0,0,27,1,0,82,0.00,0.00,0.00,0.24,103,0,0,2026-11-23T20:00:00Z,90,Caoimhín Kelleher,GK,0,2,1,Brentford,0,4,True,0
+11,0,0,0,0,0,83,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Hákon Rafn Valdimarsson,GK,0,0,0,Brentford,0,4,True,0
+11,0,0,0,0,0,84,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Nathan Collins,DEF,0,0,0,Brentford,0,4,True,0
+11,0,0,30,1,7,85,0.01,0.01,0.00,0.24,103,0,0,2026-11-23T20:00:00Z,90,Sepp van den Berg,DEF,0,0,1,Brentford,0,4,True,0
+11,0,3,54,1,5,86,0.06,0.80,0.74,0.15,103,0,2,2026-11-23T20:00:00Z,73,Keane Lewis-Potter,MID,0,0,1,Brentford,0,4,True,0
+11,0,0,25,1,2,87,0.02,0.02,0.00,0.24,103,0,0,2026-11-23T20:00:00Z,90,Kristoffer Ajer,DEF,0,0,1,Brentford,0,4,True,0
+11,0,0,16,1,2,88,0.02,0.41,0.39,0.24,103,0,0,2026-11-23T20:00:00Z,90,Michael Kayode,DEF,0,0,1,Brentford,0,4,True,0
+11,0,0,0,0,0,89,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Rico Henry,DEF,0,0,0,Brentford,0,4,True,0
+11,0,0,0,0,0,90,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Aaron Hickey,DEF,0,0,0,Brentford,0,4,True,0
 11,0,0,5,0,13,91,0.00,0.03,0.03,1.73,105,2,0,2026-11-21T15:00:00Z,90,Ethan Pinnock,DEF,0,0,1,Coventry City,2,3,True,0
+11,0,0,0,0,0,92,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Kim Ji-soo,DEF,0,0,0,Brentford,0,4,True,0
+11,0,0,0,0,0,93,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Jannik Schuster,DEF,0,0,0,Brentford,0,4,True,0
+11,0,0,3,0,0,94,0.01,0.11,0.10,0.08,103,0,0,2026-11-23T20:00:00Z,24,Kevin Schade,MID,0,0,0,Brentford,0,4,True,0
+11,0,0,7,1,3,95,0.02,0.20,0.18,0.15,103,0,0,2026-11-23T20:00:00Z,65,Dango Ouattara,MID,0,0,1,Brentford,0,4,True,0
+11,0,0,27,1,8,96,0.64,0.69,0.05,0.24,103,0,0,2026-11-23T20:00:00Z,90,Mikkel Damsgaard,MID,0,0,1,Brentford,0,4,True,0
+11,1,0,20,0,5,97,0.21,0.21,0.00,0.08,103,0,0,2026-11-23T20:00:00Z,16,Mathias Jensen,MID,0,0,0,Brentford,0,4,True,0
+11,0,2,37,1,4,98,0.17,0.19,0.02,0.24,103,0,1,2026-11-23T20:00:00Z,81,Vitaly Janelt,MID,0,0,1,Brentford,0,4,True,0
+11,0,0,0,0,0,99,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Antoni Milambo,MID,0,0,0,Brentford,0,4,True,0
+11,0,0,24,0,3,100,0.07,1.09,1.02,0.00,103,0,1,2026-11-23T20:00:00Z,9,Fábio Freitas Gouveia Carvalho,MID,0,0,0,Brentford,0,4,True,0
 11,0,0,10,0,5,101,0.01,0.01,0.00,2.71,104,4,0,2026-11-21T15:00:00Z,68,Jordan Henderson,MID,0,0,0,Chelsea,4,1,True,0
+11,0,0,21,1,10,102,0.54,0.54,0.00,0.15,103,0,0,2026-11-23T20:00:00Z,73,Yehor Yarmoliuk,MID,0,0,1,Brentford,0,4,True,0
+11,0,0,0,0,0,103,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Josh Dasilva,MID,0,0,0,Brentford,0,4,True,0
 11,0,0,6,0,4,104,0.00,0.08,0.08,0.11,105,0,0,2026-11-21T15:00:00Z,19,Frank Onyeka,MID,0,0,0,Coventry City,2,3,True,0
+11,2,1,34,1,2,105,0.12,0.16,0.04,0.24,103,0,0,2026-11-23T20:00:00Z,80,Jaidon Anthony,MID,0,0,1,Brentford,0,4,True,0
+11,0,0,0,0,0,106,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Igor Thiago Nascimento Rodrigues,FWD,0,0,0,Brentford,0,4,True,0
+11,0,0,0,0,0,107,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Kaye Furo,FWD,0,0,0,Brentford,0,4,True,0
+11,0,0,11,1,3,108,0.11,0.34,0.23,0.24,103,0,0,2026-11-23T20:00:00Z,90,Callum Wilson,FWD,0,0,1,Brentford,0,4,True,0
 11,0,0,15,0,0,109,0.00,0.00,0.00,1.83,106,2,0,2026-11-22T14:00:00Z,90,Bart Verbruggen,GK,0,3,1,Brighton,0,2,False,0
 11,0,0,14,0,0,110,0.00,0.00,0.00,1.73,105,2,0,2026-11-21T15:00:00Z,90,Carl Rushworth,GK,0,3,1,Coventry City,2,3,True,0
 11,0,0,0,0,0,111,0.00,0.00,0.00,0.00,106,0,0,2026-11-22T14:00:00Z,0,Jason Steele,GK,0,0,0,Brighton,0,2,False,0
@@ -6744,6 +6769,7 @@ GW,assists,bonus,bps,clean_sheets,defensive_contribution,element,expected_assist
 11,0,0,0,0,0,206,0.00,0.00,0.00,0.00,105,0,0,2026-11-21T15:00:00Z,0,Chadi Riad Dnanou,DEF,0,0,0,Crystal Palace,2,3,False,0
 11,0,0,0,0,0,207,0.00,0.00,0.00,0.00,105,0,0,2026-11-21T15:00:00Z,0,Oscar Mingueza,DEF,0,0,0,Crystal Palace,2,3,False,0
 11,0,0,0,0,0,208,0.00,0.00,0.00,0.00,105,0,0,2026-11-21T15:00:00Z,0,Ismaïla Sarr,MID,0,0,0,Crystal Palace,2,3,False,0
+11,0,0,3,0,0,209,0.00,0.08,0.08,1.27,103,1,0,2026-11-23T20:00:00Z,21,Brennan Johnson,MID,0,0,0,Everton,0,4,False,0
 11,0,0,10,0,8,210,0.08,0.10,0.02,2.06,105,3,0,2026-11-21T15:00:00Z,90,Adam Wharton,MID,0,0,1,Crystal Palace,2,3,False,1
 11,1,3,46,0,9,211,0.34,0.84,0.50,1.30,105,2,1,2026-11-21T15:00:00Z,78,Yéremy Pino Santos,MID,0,0,1,Crystal Palace,2,3,False,1
 11,0,0,0,0,0,212,0.00,0.00,0.00,0.00,105,0,0,2026-11-21T15:00:00Z,0,Will Hughes,MID,0,0,0,Crystal Palace,2,3,False,0
@@ -6760,9 +6786,30 @@ GW,assists,bonus,bps,clean_sheets,defensive_contribution,element,expected_assist
 11,0,0,0,0,0,223,0.00,0.00,0.00,0.00,105,0,0,2026-11-21T15:00:00Z,0,Jean-Philippe Mateta,FWD,0,0,0,Crystal Palace,2,3,False,0
 11,0,0,3,0,0,224,0.00,0.00,0.00,0.76,105,1,0,2026-11-21T15:00:00Z,11,Eddie Nketiah,FWD,0,0,0,Crystal Palace,2,3,False,0
 11,0,0,0,0,0,225,0.00,0.00,0.00,0.00,105,0,0,2026-11-21T15:00:00Z,0,Christantus Uche,FWD,0,0,0,Crystal Palace,2,3,False,0
+11,0,0,1,0,0,226,0.00,0.00,0.00,2.77,103,4,0,2026-11-23T20:00:00Z,90,Jordan Pickford,GK,0,3,1,Everton,0,4,False,0
+11,0,0,0,0,0,227,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Mark Travers,GK,0,0,0,Everton,0,4,False,0
+11,0,0,0,0,0,228,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Tom King,GK,0,0,0,Everton,0,4,False,0
+11,0,0,-22,0,5,229,0.00,0.00,0.00,0.79,103,4,0,2026-11-23T20:00:00Z,39,James Tarkowski,DEF,1,0,1,Everton,0,4,False,0
+11,0,0,-4,0,17,230,0.00,0.00,0.00,2.77,103,4,0,2026-11-23T20:00:00Z,90,Jarrad Branthwaite,DEF,0,0,1,Everton,0,4,False,0
+11,0,0,1,0,6,231,0.00,0.00,0.00,1.27,103,1,0,2026-11-23T20:00:00Z,21,Michael Keane,DEF,0,0,0,Everton,0,4,False,0
+11,0,0,-4,0,11,232,0.00,0.00,0.00,2.77,103,4,0,2026-11-23T20:00:00Z,90,Jake O'Brien,DEF,0,0,1,Everton,0,4,False,0
+11,0,0,-8,0,12,233,0.00,0.00,0.00,2.77,103,4,0,2026-11-23T20:00:00Z,90,Vitalii Mykolenko,DEF,0,0,1,Everton,0,4,False,1
+11,0,0,0,0,0,234,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Nathan Patterson,DEF,0,0,0,Everton,0,4,False,0
+11,0,0,0,0,0,235,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Adam Aznou,DEF,0,0,0,Everton,0,4,False,0
+11,0,0,7,0,8,236,0.00,0.02,0.02,1.50,103,3,0,2026-11-23T20:00:00Z,68,Kiernan Dewsbury-Hall,MID,0,0,1,Everton,0,4,False,0
 11,0,0,14,0,4,237,0.56,0.56,0.00,0.74,108,1,0,2026-11-21T12:30:00Z,77,Iliman Ndiaye,MID,0,0,1,Man City,1,1,True,0
+11,0,0,8,0,2,238,0.00,0.00,0.00,1.62,103,2,0,2026-11-23T20:00:00Z,45,Jack Grealish,MID,0,0,0,Everton,0,4,False,0
+11,0,0,20,0,21,239,0.02,0.02,0.00,1.74,103,3,0,2026-11-23T20:00:00Z,84,James Garner,MID,0,0,1,Everton,0,4,False,0
 11,0,0,11,0,7,240,0.00,0.00,0.00,1.51,106,0,0,2026-11-22T14:00:00Z,44,Tim Iroegbunam,MID,0,0,1,Hull City,0,2,True,0
 11,0,0,14,0,10,241,0.12,0.20,0.08,2.06,105,3,0,2026-11-21T15:00:00Z,88,Dwight McNeil,MID,0,0,1,Crystal Palace,2,3,False,0
+11,0,0,5,0,6,242,0.00,0.00,0.00,1.15,103,2,0,2026-11-23T20:00:00Z,45,Tyrique George,MID,0,0,1,Everton,0,4,False,0
+11,0,0,0,0,0,243,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Carlos Alcaraz Durán,MID,0,0,0,Everton,0,4,False,0
+11,0,0,11,0,8,244,0.00,0.02,0.02,2.77,103,4,0,2026-11-23T20:00:00Z,90,Harrison Armstrong,MID,0,0,1,Everton,0,4,False,0
+11,0,0,0,0,0,245,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Tyler Dibling,MID,0,0,0,Everton,0,4,False,0
+11,0,0,11,0,11,246,0.00,0.00,0.00,1.50,103,3,0,2026-11-23T20:00:00Z,68,Merlin Röhl,MID,0,0,1,Everton,0,4,False,0
+11,0,0,4,0,3,247,0.00,0.00,0.00,1.27,103,1,0,2026-11-23T20:00:00Z,21,Hayden Hackney,MID,0,0,0,Everton,0,4,False,0
+11,0,0,0,0,0,248,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Norberto Bercique Gomes Betuncal,FWD,0,0,0,Everton,0,4,False,0
+11,0,0,3,0,5,249,0.00,0.12,0.12,1.50,103,3,0,2026-11-23T20:00:00Z,68,Thierno Barry,FWD,0,0,1,Everton,0,4,False,0
 11,0,0,14,0,0,250,0.00,0.00,0.00,1.87,108,1,0,2026-11-21T12:30:00Z,90,Bernd Leno,GK,0,2,1,Fulham,1,1,False,0
 11,0,0,0,0,0,251,0.00,0.00,0.00,0.00,108,0,0,2026-11-21T12:30:00Z,0,Benjamin Lecomte,GK,0,0,0,Fulham,1,1,False,0
 11,0,0,0,0,0,252,0.00,0.00,0.00,0.00,108,0,0,2026-11-21T12:30:00Z,0,Alfie McNally,GK,0,0,0,Fulham,1,1,False,0
@@ -7078,6 +7125,7 @@ GW,assists,bonus,bps,clean_sheets,defensive_contribution,element,expected_assist
 11,0,0,4,0,4,562,0.00,0.00,0.00,2.49,110,2,0,2026-11-21T15:00:00Z,55,Daizen Maeda,MID,0,0,1,Ipswich Town,0,2,False,0
 11,0,0,0,0,0,563,0.00,0.00,0.00,0.00,106,0,0,2026-11-22T14:00:00Z,0,Hidemasa Morita,MID,0,0,0,Hull City,0,2,True,0
 11,0,0,0,0,0,564,0.00,0.00,0.00,0.00,110,0,0,2026-11-21T15:00:00Z,0,Kjell Scherpen,GK,0,0,0,Ipswich Town,0,2,False,0
+11,0,0,3,0,0,565,0.03,0.03,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,8,Mamadou Sangaré,MID,0,0,0,Brentford,0,4,True,0
 11,0,0,32,1,16,566,0.14,0.25,0.11,1.99,102,0,0,2026-11-21T15:00:00Z,90,António João Pereira de Albuquerque Tavares da Silva,DEF,0,0,1,Bournemouth,0,2,True,0
 11,0,0,7,0,0,567,0.00,0.00,0.00,1.49,109,2,0,2026-11-21T17:30:00Z,90,Lukás Hornícek,GK,0,2,1,Newcastle,2,2,True,0
 11,0,0,0,0,0,568,0.00,0.00,0.00,0.00,104,0,0,2026-11-21T15:00:00Z,0,Valentín Barco,MID,0,0,0,Chelsea,4,1,True,0
@@ -7132,6 +7180,7 @@ GW,assists,bonus,bps,clean_sheets,defensive_contribution,element,expected_assist
 11,0,0,6,0,4,617,0.06,0.08,0.02,1.72,106,0,0,2026-11-22T14:00:00Z,45,Mohamed-Ali Cho,MID,0,0,1,Hull City,0,2,True,0
 11,0,0,10,1,8,618,0.07,0.24,0.17,0.14,101,0,0,2026-11-21T15:00:00Z,72,Leon Goretzka,MID,0,0,1,Aston Villa,0,0,True,1
 11,0,0,9,0,12,619,0.02,0.04,0.02,2.49,110,2,0,2026-11-21T15:00:00Z,55,Exequiel Palacios,MID,0,0,1,Ipswich Town,0,2,False,0
+11,0,0,5,0,0,620,0.03,0.03,0.00,0.08,103,0,0,2026-11-23T20:00:00Z,16,El Hadji Malick Diouf,DEF,0,0,0,Brentford,0,4,True,0
 11,0,0,0,0,0,621,0.00,0.00,0.00,0.00,108,0,0,2026-11-21T12:30:00Z,0,Ryan McAidoo,MID,0,0,0,Man City,1,1,True,0
 11,0,0,0,0,0,622,0.00,0.00,0.00,0.00,108,0,0,2026-11-21T12:30:00Z,0,Kaden Braithwaite,DEF,0,0,0,Man City,1,1,True,0
 11,0,0,0,0,0,623,0.00,0.00,0.00,0.00,105,0,0,2026-11-21T15:00:00Z,0,Dan Bentley,GK,0,0,0,Coventry City,2,3,True,0
@@ -7160,14 +7209,19 @@ GW,assists,bonus,bps,clean_sheets,defensive_contribution,element,expected_assist
 11,0,0,0,0,0,646,0.00,0.00,0.00,0.00,101,0,0,2026-11-21T15:00:00Z,0,Malick Fofana,MID,0,0,0,Sunderland,0,0,False,0
 11,0,0,3,0,0,647,0.00,0.00,0.00,0.00,105,0,0,2026-11-21T15:00:00Z,1,Darío Osorio,MID,0,0,0,Crystal Palace,2,3,False,0
 11,0,0,0,0,0,648,0.00,0.00,0.00,0.00,104,0,0,2026-11-21T15:00:00Z,0,Jean-Mattéo Bahoya,MID,0,0,0,Leeds,4,1,False,0
+11,0,0,0,0,0,649,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Ainsley Maitland-Niles,DEF,0,0,0,Everton,0,4,False,0
 11,0,0,11,0,12,650,0.01,0.01,0.00,1.87,108,1,0,2026-11-21T12:30:00Z,90,David Affengruber,DEF,0,0,1,Fulham,1,1,False,0
 11,0,0,0,0,0,651,0.00,0.00,0.00,0.00,101,0,0,2026-11-21T15:00:00Z,0,Juan Angulo,FWD,0,0,0,Sunderland,0,0,False,0
 11,0,0,0,0,0,652,0.00,0.00,0.00,0.00,106,0,0,2026-11-22T14:00:00Z,0,Femi Azeez,MID,0,0,0,Brighton,0,2,False,0
 11,0,0,0,0,0,653,0.00,0.00,0.00,0.00,108,0,0,2026-11-21T12:30:00Z,0,Floyd Samba,MID,0,0,0,Man City,1,1,True,0
+11,0,0,0,0,0,654,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Braiden Graham,MID,0,0,0,Everton,0,4,False,0
 11,0,0,17,0,7,655,0.10,0.14,0.04,1.62,105,2,0,2026-11-21T15:00:00Z,69,Yann Gboho,MID,0,0,1,Coventry City,2,3,True,0
 11,0,0,15,0,14,656,0.03,0.03,0.00,1.73,105,2,0,2026-11-21T15:00:00Z,90,Stephen Mfuni,DEF,0,0,1,Coventry City,2,3,True,0
+11,0,0,0,0,0,657,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Gustavo Nunes Fernandes Gomes,MID,0,0,0,Brentford,0,4,True,0
 11,0,0,0,0,0,658,0.00,0.00,0.00,0.00,106,0,0,2026-11-22T14:00:00Z,0,Younes Ibrahim,MID,0,0,0,Brighton,0,2,False,0
 11,0,0,0,0,0,659,0.00,0.00,0.00,0.00,109,0,0,2026-11-21T17:30:00Z,0,Mason Miley,MID,0,0,0,Newcastle,2,2,True,0
+11,0,0,0,0,0,660,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Benjamin Fredrick,DEF,0,0,0,Brentford,0,4,True,0
+11,0,0,0,0,0,661,0.00,0.00,0.00,0.00,103,0,0,2026-11-23T20:00:00Z,0,Ellery Balcombe,GK,0,0,0,Brentford,0,4,True,0
 11,0,0,0,0,0,662,0.00,0.00,0.00,0.00,104,0,0,2026-11-21T15:00:00Z,0,Mahdi Nicoll-Jazuli,MID,0,0,0,Chelsea,4,1,True,0
 11,0,0,0,0,0,663,0.00,0.00,0.00,0.00,109,0,0,2026-11-21T17:30:00Z,0,Miodrag Pivas,DEF,0,0,0,Newcastle,2,2,True,0
 11,0,0,0,0,0,664,0.00,0.00,0.00,0.00,109,0,0,2026-11-21T17:30:00Z,0,Vakhtang Salia,FWD,0,0,0,Newcastle,2,2,True,0
