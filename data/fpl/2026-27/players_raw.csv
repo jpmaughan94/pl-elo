@@ -35,7 +35,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 34,244954,2,7,2,Pau,Pau,Torres,a,,100,560,7,0,0,0.38,0.08,0.46,12.82,11,0,36,40,1
 35,515597,2,7,3,Bogarde,Lamare,Bogarde,a,,,16,0,0,0,0.00,0.00,0.00,0.22,0,0,3,1,0
 36,441302,2,7,2,Maatsen,Ian,Maatsen,a,,100,695,8,0,0,0.46,0.56,1.02,14.14,13,0,64,44,2
-37,184667,2,7,2,Lindelöf,Victor,Lindelöf,d,Illness - 75% chance of playing,75,900,10,0,0,0.44,0.18,0.62,18.62,17,0,79,72,2
+37,184667,2,7,2,Lindelöf,Victor,Lindelöf,a,,100,900,10,0,0,0.44,0.18,0.62,18.62,17,0,79,72,2
 38,606798,2,7,2,A.García,Andrés,García,u,Has joined Getafe on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 39,578545,2,7,2,Nedeljkovic,Kosta,Nedeljkovic,u,Has joined Rangers on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 41,195546,2,7,3,Buendía,Emiliano,Buendía Stati,a,,,642,8,1,1,1.79,0.65,2.44,9.88,9,0,130,66,2
@@ -443,10 +443,10 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 357,216094,14,14,2,Frimpong,Jeremie,Frimpong,a,,100,211,2,0,0,0.01,0.25,0.26,4.95,5,0,30,13,0
 358,544877,14,14,2,Kerkez,Milos,Kerkez,a,,,912,10,0,0,0.19,0.39,0.58,13.29,10,0,154,63,4
 359,171287,14,14,2,Gomez,Joe,Gomez,a,,100,19,0,0,0,0.00,0.00,0.00,1.38,1,0,10,6,0
-360,492777,14,14,2,Bradley,Conor,Bradley,i,Knee injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
+360,492777,14,14,2,Bradley,Conor,Bradley,i,Knee injury - Expected back 12 Dec,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 361,519440,14,14,2,Lucky,Wellity,Lucky,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 362,606702,14,14,2,Jacquet,Jeremy,Jacquet,a,,100,952,11,0,0,0.53,0.30,0.83,13.03,10,0,197,97,5
-363,647681,14,14,2,Leoni,Giovanni,Leoni,i,Knee injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
+363,647681,14,14,2,Leoni,Giovanni,Leoni,i,Knee injury - Expected back 12 Dec,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 364,214285,14,14,2,Tsimikas,Kostas,Tsimikas,a,,,75,1,0,0,0.04,0.08,0.12,0.55,0,0,12,6,0
 365,489580,14,14,2,Ramsay,Calvin,Ramsay,u,Has joined St Mirren on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 366,494595,14,14,3,Wirtz,Florian,Wirtz,a,,100,881,11,2,6,2.19,2.31,4.50,11.44,8,0,274,72,5
@@ -517,7 +517,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 420,550864,16,1,2,Yoro,Leny,Yoro,s,Suspended until 2 Dec,0,447,6,0,0,0.18,0.28,0.46,12.23,16,0,3,53,0
 421,606745,16,1,2,Heaven,Ayden,Heaven,a,,100,224,2,0,0,0.12,0.04,0.16,4.95,6,0,12,18,0
 422,230001,16,1,2,Mazraoui,Noussair,Mazraoui,a,,100,257,2,0,1,0.24,0.12,0.36,8.27,11,0,21,24,0
-423,106760,16,1,2,Shaw,Luke,Shaw,i,Unspecified injury - Unknown return date,0,425,5,0,1,0.03,0.59,0.62,6.25,6,0,59,36,0
+423,106760,16,1,2,Shaw,Luke,Shaw,d,Unspecified injury - 75% chance of playing,75,425,5,0,1,0.03,0.59,0.62,6.25,6,0,59,36,0
 424,577974,16,1,2,Amass,Harry,Amass,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 425,547676,16,1,2,Fredricson,Tyler,Fredricson,u,Has joined Lausanne-Sport permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 426,141746,16,1,3,B.Fernandes,Bruno,Borges Fernandes,a,,,900,10,4,2,4.35,2.33,6.68,20.07,20,0,246,59,0
