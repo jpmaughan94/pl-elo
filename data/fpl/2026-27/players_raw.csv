@@ -126,7 +126,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 109,489639,5,36,1,Verbruggen,Bart,Verbruggen,a,,,990,11,0,0,0.00,0.21,0.21,15.42,9,29,256,0,7
 111,49262,5,36,1,Steele,Jason,Steele,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 113,231416,5,36,2,F.Kadıoğlu,Ferdi,Kadıoğlu,a,,100,527,7,0,0,0.15,0.16,0.31,10.21,7,0,96,28,4
-114,204120,5,36,2,Boscagli,Olivier,Boscagli,a,,,848,11,0,1,0.14,1.35,1.49,12.78,7,0,214,60,8
+114,204120,5,36,2,Boscagli,Olivier,Boscagli,d,Illness - 75% chance of playing,75,848,11,0,1,0.14,1.35,1.49,12.78,7,0,214,60,8
 115,465730,5,36,2,De Cuyper,Maxim,De Cuyper,a,,,912,11,2,4,2.44,1.91,4.35,14.33,9,0,270,36,7
 116,83299,5,36,2,Dunk,Lewis,Dunk,a,,100,839,9,1,0,0.05,0.21,0.26,13.27,9,0,183,61,5
 117,550090,5,36,2,Coppola,Diego,Coppola,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -505,7 +505,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 43,166989,16,1,3,Tielemans,Youri,Tielemans,a,,100,717,10,1,1,0.98,1.17,2.15,14.62,17,0,193,87,0
 131,535301,16,1,3,Baleba,Carlos,Baleba,i,Hamstring injury - Unknown return date,0,232,3,0,0,0.14,0.05,0.19,4.76,6,0,33,31,0
 162,532605,16,1,3,Andrey Santos,Andrey,Nascimento dos Santos,a,,,330,4,0,0,0.19,0.30,0.49,7.78,10,0,67,47,0
-325,59735,16,1,1,Darlow,Karl,Darlow,d,Unspecified injury - 75% chance of playing,75,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
+325,59735,16,1,1,Darlow,Karl,Darlow,a,,100,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 412,465247,16,1,1,Lammens,Senne,Lammens,a,,,990,11,0,0,0.00,0.04,0.04,22.22,23,40,116,0,0
 413,451302,16,1,1,Bayindir,Altay,Bayındır,u,Has joined Celta Vigo on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 414,21205,16,1,1,Heaton,Tom,Heaton,a,,100,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -517,7 +517,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 420,550864,16,1,2,Yoro,Leny,Yoro,a,,100,447,6,0,0,0.18,0.28,0.46,12.23,16,0,3,53,0
 421,606745,16,1,2,Heaven,Ayden,Heaven,a,,100,224,2,0,0,0.12,0.04,0.16,4.95,6,0,12,18,0
 422,230001,16,1,2,Mazraoui,Noussair,Mazraoui,a,,100,257,2,0,1,0.24,0.12,0.36,8.27,11,0,21,24,0
-423,106760,16,1,2,Shaw,Luke,Shaw,d,Unspecified injury - 75% chance of playing,75,425,5,0,1,0.03,0.59,0.62,6.25,6,0,59,36,0
+423,106760,16,1,2,Shaw,Luke,Shaw,a,,100,425,5,0,1,0.03,0.59,0.62,6.25,6,0,59,36,0
 424,577974,16,1,2,Amass,Harry,Amass,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 425,547676,16,1,2,Fredricson,Tyler,Fredricson,u,Has joined Lausanne-Sport permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 426,141746,16,1,3,B.Fernandes,Bruno,Borges Fernandes,a,,,900,10,4,2,4.35,2.33,6.68,20.07,20,0,246,59,0
@@ -586,7 +586,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 478,470315,18,17,2,Netz,Luca,Netz,a,,,76,0,0,0,0.00,0.03,0.03,0.66,1,0,13,3,0
 479,538638,18,17,2,Bindon,Tyler,Bindon,u,Has joined Charlton Athletic on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 480,222531,18,17,3,Gibbs-White,Morgan,Gibbs-White,a,,100,900,10,1,3,2.77,2.61,5.38,12.75,14,0,205,50,1
-482,209046,18,17,3,Hudson-Odoi,Callum,Hudson-Odoi,i,Unspecified injury - Unknown return date,0,45,0,0,0,0.11,0.08,0.19,0.31,0,0,15,4,0
+482,209046,18,17,3,Hudson-Odoi,Callum,Hudson-Odoi,a,,100,45,0,0,0,0.11,0.08,0.19,0.31,0,0,15,4,0
 483,456512,18,17,3,Ndoye,Dan,Ndoye,a,,100,661,10,2,0,2.36,1.36,3.72,9.74,10,0,85,31,2
 484,503301,18,17,3,Hutchinson,Omari,Hutchinson,u,Has joined AC Milan on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 485,476887,18,17,3,Bakwa,Dilane,Bakwa,u,Has joined Lille on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
