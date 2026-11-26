@@ -86,7 +86,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 75,158499,3,91,3,Christie,Ryan,Christie,a,,100,480,6,0,1,1.07,0.83,1.90,4.73,7,0,108,71,4
 76,614574,3,91,3,Tóth.A,Alex,Tóth,i,Hamstring injury - Unknown return date,0,17,0,0,0,0.00,0.00,0.00,0.56,2,0,8,2,0
 77,489888,3,91,3,Adli,Amine,Adli,a,,100,21,0,1,0,0.49,0.07,0.56,0.44,0,0,38,3,0
-78,560262,3,91,3,Kroupi.Jr,Junior,Kroupi,a,,100,68,0,0,1,0.00,0.30,0.30,2.71,1,0,29,8,0
+78,560262,3,91,3,Kroupi.Jr,Junior,Kroupi,d,Illness - 75% chance of playing,75,68,0,0,1,0.00,0.30,0.30,2.71,1,0,29,8,0
 79,444102,3,91,4,Evanilson,Francisco Evanilson,de Lima Barbosa,a,,,927,11,6,4,5.57,1.07,6.64,12.27,11,0,304,67,6
 80,168636,3,91,4,Enes Ünal,Enes,Ünal,u,Has joined Getafe permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 81,561245,3,91,4,Rodríguez,Álvaro,Rodríguez,a,,100,58,0,0,0,0.41,0.05,0.46,0.50,1,0,20,6,0
@@ -180,7 +180,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 156,247632,6,8,3,Neto,Pedro,Lomba Neto,a,,,764,9,3,1,1.82,1.11,2.93,12.51,13,0,197,60,2
 157,624773,6,8,3,Estêvão,Estêvão,Almeida de Oliveira Gonçalves,a,,,241,2,0,0,0.41,0.75,1.16,5.39,6,0,64,20,1
 158,463936,6,8,3,Gittens,Jamie,Bynoe-Gittens,i,Ankle injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-159,486672,6,8,3,Caicedo,Moisés,Caicedo Corozo,d,Back injury - 75% chance of playing,75,461,6,0,0,0.05,0.10,0.15,6.19,4,0,89,47,2
+159,486672,6,8,3,Caicedo,Moisés,Caicedo Corozo,a,,100,461,6,0,0,0.05,0.10,0.15,6.19,4,0,89,47,2
 161,514356,6,8,3,Lavia,Roméo,Lavia,a,,,547,7,1,1,0.77,0.18,0.95,11.50,13,0,141,81,1
 163,491007,6,8,3,D.Essugo,Dário,Luís Essugo,u,Has joined RC Strasbourg on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 164,593117,6,8,3,Quenda,Geovany,Quenda,a,,100,128,1,0,0,0.07,0.03,0.10,2.23,3,0,35,12,1
@@ -226,7 +226,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 195,218997,7,9,4,Simms,Ellis,Simms,a,,,116,1,1,0,0.40,0.01,0.41,2.99,3,0,42,3,0
 196,551262,7,9,4,Markelo,Jahnoah,Markelo,u,Has joined Shabab Al-Ahli Dubai permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 197,549653,7,9,4,Bassette,Norman,Bassette,u,Has joined KVC Westerlo on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-492,210156,7,9,4,Awoniyi,Taiwo,Awoniyi,d,Ankle injury - 75% chance of playing,75,487,6,2,0,2.90,0.05,2.95,8.14,15,0,86,21,0
+492,210156,7,9,4,Awoniyi,Taiwo,Awoniyi,i,Ankle injury - Unknown return date,0,487,6,2,0,2.90,0.05,2.95,8.14,15,0,86,21,0
 575,661888,7,9,3,Yirenkyi,Caleb,Yirenkyi,d,Unspecified injury - 75% chance of playing,75,647,8,0,0,0.15,0.20,0.35,10.18,12,0,79,65,3
 584,196100,7,9,3,Hamer,Gustavo,Hamer,a,,,71,0,0,0,0.00,0.26,0.26,1.20,2,0,23,6,0
 599,627221,7,9,4,Cherif,Sidiki,Cherif,a,,,298,3,1,1,0.39,0.02,0.41,4.89,6,0,70,8,1
@@ -242,7 +242,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 204,244723,8,31,2,Mitchell,Tyrick,Mitchell,a,,,959,11,2,0,0.79,1.05,1.84,22.81,26,0,99,74,1
 205,218364,8,31,2,Sosa,Borna,Sosa,u,Has joined FC Cologne on loan for the rest of the season,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 206,515621,8,31,2,Chadi Riad,Chadi,Riad Dnanou,i,Knee injury - Unknown return date,0,72,1,0,0,0.00,0.01,0.01,0.98,2,0,7,7,0
-207,242313,8,31,2,Mingueza,Oscar,Mingueza,d,Thigh injury - 75% chance of playing,75,161,2,0,0,0.00,0.11,0.11,4.17,4,0,9,12,0
+207,242313,8,31,2,Mingueza,Oscar,Mingueza,a,,100,161,2,0,0,0.00,0.11,0.11,4.17,4,0,9,12,0
 208,232185,8,31,3,Sarr,Ismaïla,Sarr,i,Groin injury - Expected back 29 Nov,0,15,0,0,0,0.00,0.01,0.01,0.18,0,0,6,2,0
 210,496221,8,31,3,Wharton,Adam,Wharton,a,,100,973,11,0,1,0.43,1.46,1.89,22.80,26,0,163,88,1
 211,488024,8,31,3,Yeremy,Yéremy,Pino Santos,s,Suspended until 2 Dec,0,762,10,2,3,2.11,1.50,3.61,17.24,18,0,184,61,1
@@ -667,7 +667,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 551,536661,20,56,3,N.Angulo,Nilson,Angulo,a,,,534,8,1,1,0.79,0.28,1.06,6.60,11,0,97,38,2
 552,441264,20,56,4,Brobbey,Brian,Brobbey,i,Muscular injury - Unknown return date,0,619,8,3,1,4.21,0.13,4.34,9.58,12,0,130,21,3
 553,437505,20,56,4,Isidor,Wilson,Isidor,a,,100,339,2,1,1,2.27,0.05,2.32,6.49,5,0,67,17,1
-612,638411,20,56,2,Methalie,Dayann,Méthalie,a,,100,107,1,0,0,0.03,0.01,0.04,3.29,6,0,-7,5,0
+612,638411,20,56,2,Methalie,Dayann,Méthalie,d,Illness - 75% chance of playing,75,107,1,0,0,0.03,0.01,0.04,3.29,6,0,-7,5,0
 613,696104,20,56,3,Ahoka,Jules,Ahoka,a,,,201,1,0,0,0.01,0.03,0.04,2.29,0,0,34,31,2
 646,549940,20,56,3,Fofana,Malick,Fofana,a,,,131,0,0,0,0.42,0.03,0.45,4.44,4,0,26,11,0
 651,661313,20,56,4,J.Angulo,Juan,Angulo,a,,,9,0,0,0,0.00,0.00,0.00,0.15,1,0,3,0,0
