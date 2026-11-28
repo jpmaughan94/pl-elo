@@ -113,7 +113,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 99,543295,4,94,3,Milambo,Antoni,Milambo,i,Lack of match fitness - Expected back 5 Dec,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 100,244858,4,94,3,Carvalho,Fábio,Freitas Gouveia Carvalho,a,,100,12,0,2,0,1.18,0.07,1.25,0.13,0,0,47,3,0
 102,508395,4,94,3,Yarmoliuk,Yehor,Yarmoliuk,a,,100,452,5,1,1,0.19,0.86,1.05,7.98,7,0,94,48,2
-103,183656,4,94,3,Dasilva,Josh,Dasilva,i,Lack of match fitness - Expected back 5 Dec,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
+103,183656,4,94,3,Dasilva,Josh,Dasilva,a,,100,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 105,444180,4,94,3,Anthony,Jaidon,Anthony,a,,,553,6,1,4,1.72,0.97,2.69,8.02,7,0,144,49,3
 106,502500,4,94,4,Thiago,Igor Thiago,Nascimento Rodrigues,s,Suspended until 5 Dec,0,824,10,2,3,4.12,1.26,5.38,12.87,11,0,111,49,3
 107,593174,4,94,4,Furo,Kaye,Furo,i,Unspecified injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -214,7 +214,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 183,480457,7,9,3,Rudoni,Jack,Rudoni,a,,100,820,10,3,2,2.28,2.04,4.32,12.45,14,0,214,72,2
 184,168144,7,9,3,Grimes,Matt,Grimes,a,,,786,9,0,0,0.17,0.25,0.42,13.23,16,0,116,66,1
 185,501459,7,9,3,Sakamoto,Tatsuhiro,Sakamoto,a,,,488,5,2,0,0.70,0.11,0.81,7.19,11,0,98,44,0
-186,241293,7,9,3,Mason-Clark,Ephron,Mason-Clark,d,Knee injury - 75% chance of playing,75,326,5,0,0,0.51,0.37,0.88,4.92,5,0,34,18,1
+186,241293,7,9,3,Mason-Clark,Ephron,Mason-Clark,a,,100,326,5,0,0,0.51,0.37,0.88,4.92,5,0,34,18,1
 187,439668,7,9,3,Eccles,Josh,Eccles,i,Ankle injury - Unknown return date,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 188,226965,7,9,3,Torp,Victor,Torp,a,,,297,3,0,1,0.28,0.33,0.61,6.15,8,0,69,30,0
 189,684268,7,9,3,Shepherd,George,Shepherd,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
@@ -520,7 +520,7 @@ id,code,team,team_code,element_type,web_name,first_name,second_name,status,news,
 423,106760,16,1,2,Shaw,Luke,Shaw,a,,100,425,5,0,1,0.03,0.59,0.62,6.25,6,0,59,36,0
 424,577974,16,1,2,Amass,Harry,Amass,a,,,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
 425,547676,16,1,2,Fredricson,Tyler,Fredricson,u,Has joined Lausanne-Sport permanently,0,0,0,0,0,0.00,0.00,0.00,0.00,0,0,0,0,0
-426,141746,16,1,3,B.Fernandes,Bruno,Borges Fernandes,d,Illness - 75% chance of playing,75,900,10,4,2,4.35,2.33,6.68,20.07,20,0,246,59,0
+426,141746,16,1,3,B.Fernandes,Bruno,Borges Fernandes,a,,100,900,10,4,2,4.35,2.33,6.68,20.07,20,0,246,59,0
 427,446008,16,1,3,Mbeumo,Bryan,Mbeumo,a,,,913,11,4,1,4.63,1.29,5.92,19.08,21,0,199,42,0
 428,430871,16,1,3,Cunha,Matheus,Santos Carneiro da Cunha,a,,,748,9,1,4,1.46,1.33,2.79,15.09,15,0,201,49,1
 429,176297,16,1,3,Rashford,Marcus,Rashford,i,Hip injury - Unknown return date,0,352,4,0,0,0.78,0.43,1.21,4.50,3,0,61,18,1
